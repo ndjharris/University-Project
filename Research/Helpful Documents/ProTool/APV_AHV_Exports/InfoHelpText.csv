@@ -1,0 +1,118 @@
+"//Note: You cannot open this export file in the CSV format by double-clicking on the file."
+"//Use the Excel menu command File > Open to open this file."
+"$_Languages"
+"9(1) English (United States)","512(32) $_Undefined"
+"$_Typ(InfoHelpText)","$_Attrib(MultiLanguage)"
+"//$_Delta export on 18.09.25  13:58:53"
+"F9: Update Start / Stop","F9: Update Start / Stop"
+"F9:  Update start / stop
+F10: Force entry / start","F9:  Update start / stop
+F10: Force entry / start"
+"F9:  Password processing
+F10: Printer settings
+F11: Status Variable
+F12: System settings
+F13: Message processing","F9:  Password processing
+F10: Printer settings
+F11: Status Variable
+F12: System settings
+F13: Message processing"
+"F9:  Open event message window
+F10: Delete event message buffer
+
+F13: Delete alarm message buffer
+
+K1:  Toggle event mess. buffer/page
+K2:  Toggle alarm mess. buffer/page","F9:  Open event message window
+F10: Delete event message buffer
+
+F13: Delete alarm message buffer
+
+K1:  Toggle event mess. buffer/page
+K2:  Toggle alarm mess. buffer/page"
+"F9: Password list","F9: Password list"
+"F9:  Transmission from SPS
+     to OP and data medium
+F10: Transmission from data medium
+     to OP and SPS
+F11: Delete data record
+F12: Edit data record
+F13: Select data record","F9:  Transmission from SPS
+     to OP and data medium
+F10: Transmission from data medium
+     to OP and SPS
+F11: Delete data record
+F12: Edit data record
+F13: Select data record"
+"F9:  Display blanked
+F10: Language switchover
+F11: Backup / Restore","F9:  Display blanked
+F10: Language switchover
+F11: Backup / Restore"
+"F9:  Transmission from SPS to OP
+F10: Transmission from OP to SPS
+F11: Transmission from data medium
+     to OP
+F12: Transmission from OP 
+     to data medium
+F13: Select data record","F9:  Transmission from SPS to OP
+F10: Transmission from OP to SPS
+F11: Transmission from data medium
+     to OP
+F12: Transmission from OP 
+     to data medium
+F13: Select data record"
+"F9:  Backup  all
+F10: Restore all
+F11: Backup  Recipes
+F12: Restore Recipes","F9:  Backup  all
+F10: Restore all
+F11: Backup  Recipes
+F12: Restore Recipes"
+"K1: DEL. ALARM BUF. K2: SHOW 
+ALARMS 
+K3: PRESTERILIZING  K4: CIP LYE
+K5: CIP LYE + ACID  K6: DRAIN TANK 
+K7: STOP
+K9: CIP FILLER
+K10: CHAIN WASH","K1: DEL. ALARM BUF. K2: SHOW 
+ALARMS 
+K3: PRESTERILIZING  K4: CIP LYE
+K5: CIP LYE + ACID  K6: DRAIN TANK 
+K7: STOP
+K9: CIP FILLER
+K10: CHAIN WASH"
+"F14: A-TANK","F14: A-TANK"
+"VIEW OR CHANGE CONTROLLER SETTINGS
+F9 : START/STOP AUTO
+F10: START/STOP MANUAL
+F11: PREVIOUS CONTROLLER
+F12: NEXT CONTROLLER
+F13: CURVE FOR ACTUAL CONTROLLER
+F14: TANK MAIN","VIEW OR CHANGE CONTROLLER SETTINGS
+F9 : START/STOP AUTO
+F10: START/STOP MANUAL
+F11: PREVIOUS CONTROLLER
+F12: NEXT CONTROLLER
+F13: CURVE FOR ACTUAL CONTROLLER
+F14: TANK MAIN"
+"VIEW GRAPHIC CURVE FOR CONTROLLER
+
+ENTER NEW VALUES IN ""MAX"" AND ""MIN"" 
+TO CHANGE SCALING OF Y-AXES ","VIEW GRAPHIC CURVE FOR CONTROLLER
+
+ENTER NEW VALUES IN ""MAX"" AND ""MIN"" 
+TO CHANGE SCALING OF Y-AXES "
+"VIEW OR CHANGE STATUS OFF OUTPUT 
+ACCORDING TO ITEM NUMBER.
+1:USE ARROW-KEYS TO MOVE THE CURSOR 
+TO THE ITEM NUMBER
+2:PRESS ENTER
+3:SELECT ""ON"", ""OFF"" OR ""AUTO"" AND 
+PRESS ENTER TO ACCEPT   ","VIEW OR CHANGE STATUS OFF OUTPUT 
+ACCORDING TO ITEM NUMBER.
+1:USE ARROW-KEYS TO MOVE THE CURSOR 
+TO THE ITEM NUMBER
+2:PRESS ENTER
+3:SELECT ""ON"", ""OFF"" OR ""AUTO"" AND 
+PRESS ENTER TO ACCEPT   "
