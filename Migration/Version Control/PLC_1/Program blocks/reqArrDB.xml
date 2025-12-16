@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="FILL" Datatype="Array[0..31] of Int" Remanence="Retain">
+      <Subelement Path="0">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="1">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="2">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="3">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="4">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="5">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="6">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="7">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="8">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="9">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="10">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="11">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="12">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="13">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="14">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="15">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="16">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="17">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="18">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="19">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="20">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="21">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="22">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="23">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="24">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="25">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="26">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="27">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="28">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="29">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="30">
+        <StartValue>9999</StartValue>
+      </Subelement>
+      <Subelement Path="31">
+        <StartValue>9999</StartValue>
+      </Subelement>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>reqArrDB</Name>
+      <Namespace />
+      <Number>998</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

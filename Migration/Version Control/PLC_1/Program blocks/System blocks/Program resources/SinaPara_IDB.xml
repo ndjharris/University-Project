@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <InstanceOfName>SinaPara</InstanceOfName>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="Start" Datatype="Bool" />
+    <Member Name="ReadWrite" Datatype="Bool" />
+    <Member Name="ParaNo" Datatype="Int" />
+    <Member Name="AxisNo" Datatype="Byte" />
+    <Member Name="hardwareId" Datatype="HW_IO" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="Ready" Datatype="Bool" />
+    <Member Name="Busy" Datatype="Bool" />
+    <Member Name="Done" Datatype="Bool" />
+    <Member Name="Error" Datatype="Bool" />
+    <Member Name="ErrorId" Datatype="DWord" />
+    <Member Name="DiagId" Datatype="Word" />
+  </Section>
+  <Section Name="InOut">
+    <Member Name="Parameter" Datatype="Array[1..16] of SinaParameter" Version="1.1" />
+  </Section>
+  <Section Name="Static">
+    <Member Name="sbWrError" Datatype="Bool" />
+    <Member Name="sbWrDone" Datatype="Bool" />
+    <Member Name="sbRdError" Datatype="Bool" />
+    <Member Name="sbWrBusy" Datatype="Bool" />
+    <Member Name="sbRdBusy" Datatype="Bool" />
+    <Member Name="sbWrStart" Datatype="Bool" />
+    <Member Name="sbRdStart" Datatype="Bool" />
+    <Member Name="sbWrStart1" Datatype="Bool" />
+    <Member Name="sbRdStart1" Datatype="Bool" />
+    <Member Name="sbWrStart2" Datatype="Bool" />
+    <Member Name="sbRdStart2" Datatype="Bool" />
+    <Member Name="sbStart" Datatype="Bool" />
+    <Member Name="sbReady" Datatype="Bool" />
+    <Member Name="sbRead" Datatype="Bool" />
+    <Member Name="sbWrite" Datatype="Bool" />
+    <Member Name="sbParaNo" Datatype="Bool" />
+    <Member Name="sbBusy" Datatype="Bool" />
+    <Member Name="sbError" Datatype="Bool" />
+    <Member Name="sbDone" Datatype="Bool" />
+    <Member Name="siParaNo" Datatype="Int" />
+    <Member Name="syAxisNo" Datatype="Byte" />
+    <Member Name="siReqRef" Datatype="Int" />
+    <Member Name="siErrorId" Datatype="Int" />
+    <Member Name="siErrorCount" Datatype="Int" />
+    <Member Name="siMaxErrCount" Datatype="Int" />
+    <Member Name="swParaError" Datatype="Word" />
+    <Member Name="sReqParaMulti" Datatype="SinaReqParaMulti" Version="1.1">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="sxChaParaMulti" Datatype="SinaChaParaMulti" Version="1.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="sRespParaMulti" Datatype="SinaRespParaMulti" Version="1.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="RDREC_1" Datatype="RDREC" Version="1.0">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="WRREC_1" Datatype="WRREC" Version="1.1">
+      <AttributeList>
+        <BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute>
+      </AttributeList>
+    </Member>
+    <Member Name="siParaNoMax" Datatype="Int" />
+    <Member Name="siLenHeader" Datatype="Int" />
+    <Member Name="siLenParaMulti" Datatype="Int" />
+    <Member Name="siLenChaPara" Datatype="Int" />
+  </Section>
+</Sections></Interface>
+      <Name>SinaPara_IDB</Name>
+      <Namespace />
+      <Number>32</Number>
+      <OfSystemLibElement>SinaPara</OfSystemLibElement>
+      <OfSystemLibVersion>1.1</OfSystemLibVersion>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

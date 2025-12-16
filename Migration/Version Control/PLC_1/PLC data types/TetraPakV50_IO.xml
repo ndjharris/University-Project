@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="IN" Datatype="Struct">
+      <Member Name="Address" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">First Byte address of 4 byte address space</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Pulse" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Trigger one clean pulse on SV 1</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SV_1" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Trigger solenoid valve 1 for main valve activation</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Wink" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Visual indication for locating the unit</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="OUT" Datatype="Struct">
+      <Member Name="ValvePosition" Datatype="Real">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Current Valve position (0 to 720 * 0.1)</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ErrorStatus" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">See Block Comment</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ValveState" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Current Valve state</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Main" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Main energised Position</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="DE_EN" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">De-energised</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_DI4" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output signal status Pin 4</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_DI2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output signal status Pin 2</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_DA" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output device recognised</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_DE" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output device error event has appeared</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_PQ" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output port qualifer proces data valid</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="IN_OUT" Datatype="Struct">
+      <Member Name="HMI_INFO" Datatype="Int" />
+      <Member Name="HMI_CMD" Datatype="Int" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>TetraPakV50_IO</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text> DEVICEID : 9
+ VENDOR : IFM on behalf of Tetra Pak
+ DATE: 27.12.2023 
+
+ Comment : TP V50 IO Interface
+</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text> TPV50_9_IO</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

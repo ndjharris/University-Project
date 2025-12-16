@@ -1,0 +1,1029 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="V0552" Datatype="&quot;IO Burkett Type 8691 r3&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0934" Datatype="&quot;IO Burkett Type 8691 r3&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0935" Datatype="&quot;IO Burkett Type 8691 r3&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI_100_005_X06_X1_3p4" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN_100, Node 5, Port 6  X1.3 pin4 - GS09.40</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DI_100_005_X06_X1_3p2" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN_100, Node 5, Port 6  X1.3 pin2 - GS09.41</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="V0940" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0941" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0942" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0943" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0944" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX0940" Datatype="&quot;IFM_TA1612_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Addr" Datatype="Int">
+            <StartValue>426</StartValue>
+          </Member>
+          <Member Name="Value" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX0941" Datatype="&quot;IFM_TA1612_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX0942" Datatype="&quot;IFM_TA1612_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="PTX0940" Datatype="&quot;IFM_PI1714_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value_p" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="Value_t" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="PTX0941" Datatype="&quot;IFM_PI1714_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value_p" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="Value_t" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="CTX0931" Datatype="&quot;IFM_LDL_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value_c" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="Value_t" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0945_SV1" Datatype="Bool" Remanence="Retain" />
+    <Member Name="V0945_SV2" Datatype="Bool" Remanence="Retain" />
+    <Member Name="V0945_Open" Datatype="Bool" Remanence="Retain" />
+    <Member Name="V0945_Closed" Datatype="Bool" Remanence="Retain" />
+    <Member Name="M0940_Iso" Datatype="Bool" Remanence="Retain" />
+    <Member Name="M0941_Iso" Datatype="Bool" Remanence="Retain" />
+    <Member Name="V0945_pa_auto_req" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pressure Assist - SV2 request</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="V1021" Datatype="&quot;TetraPakV70_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1023" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1024" Datatype="&quot;IO Burkett Type 8691 r3&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1025" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1027" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1083" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX1040" Datatype="&quot;IFM_TA1612_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX1041" Datatype="&quot;IFM_TA1612_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI_100_012_X1_1p4" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN 100, Node 12, X1.1p4 - EmptyLine Pushbutton</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DO_100_012_X1_2p4" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN 100, Node 12, X1.2p4 - EOL in use Beacon</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DI_100_010_X01_4" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN 100, Node 10, X01.4 - M09.40 MPCB Tripped</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DI_100_010_X02_4" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN 100, Node 10, X02.4 - M09.41 Run</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DI_100_010_X03_4" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN 100, Node 10, X03.4 - M09.41 MPCB Tripped</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DO_100_010_X04_4" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN 100, Node 10, X04.4 - M09.41 Req</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="DO_100_012_X1_0p4" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN 100, Node 12, X1.0p4 - Polygon F2 Product at Filler</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="FT0940" Datatype="&quot;EH_ProMag300_PD_UDT&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Volume_Flow" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="Totaliser_Value" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="LS1074" Datatype="&quot;IFM LMT100_IO&quot;" Remanence="Retain" />
+    <Member Name="TTX0940_Params" Datatype="&quot;IF_TA1612_TTxNest&quot;" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Acyclic parameter read/write</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX0941_Params" Datatype="&quot;IF_TA1612_TTxNest&quot;" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Acyclic parameter read/write</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX0942_Params" Datatype="&quot;IF_TA1612_TTxNest&quot;" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Acyclic parameter read/write</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX1040_Params" Datatype="&quot;IF_TA1612_TTxNest&quot;" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Acyclic parameter read/write</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="TTX1041_Params" Datatype="&quot;IF_TA1612_TTxNest&quot;" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Acyclic parameter read/write</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0552_Params" Datatype="&quot;BurkettType8691_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="IF" Datatype="&quot;Burkett 8691 REV.3&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="DeviceParameters" Datatype="Struct">
+                    <Member Name="Parameter_05" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_06" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="IntervalTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_07" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ValueTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_08" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="EnableTotaliser" Datatype="Byte">
+                          <StartValue>B#16#0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_10" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_14" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0934_Params" Datatype="&quot;BurkettType8691_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="IF" Datatype="&quot;Burkett 8691 REV.3&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="DeviceParameters" Datatype="Struct">
+                    <Member Name="Parameter_05" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_06" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="IntervalTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_07" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ValueTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_10" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_14" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0935_Params" Datatype="&quot;BurkettType8691_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="IF" Datatype="&quot;Burkett 8691 REV.3&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="DeviceParameters" Datatype="Struct">
+                    <Member Name="Parameter_05" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_06" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="IntervalTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_07" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ValueTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_10" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_14" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0940_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="IF" Datatype="&quot;TetraPakV50_9_Params&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="DeviceIndentification" Datatype="Struct">
+                    <Member Name="V_FirmwareRevision" Datatype="Struct">
+                      <Member Name="Length" Datatype="Int">
+                        <StartValue>5</StartValue>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0941_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0942_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0943_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0944_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1021_Params" Datatype="&quot;TetraPakV70_10_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1023_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="IF" Datatype="&quot;TetraPakV50_9_Params&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="Commando" Datatype="Struct">
+                    <Member Name="Commando_04" Datatype="Struct">
+                      <Member Name="IOLStat" Datatype="DWord">
+                        <StartValue>DWORD#16#0000_1023</StartValue>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1024_Params" Datatype="&quot;BurkettType8691_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="IF" Datatype="&quot;Burkett 8691 REV.3&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="DeviceParameters" Datatype="Struct">
+                    <Member Name="Parameter_05" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_06" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="IntervalTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_07" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ValueTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_10" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                    <Member Name="Parameter_14" Datatype="Struct">
+                      <Member Name="Value" Datatype="Struct">
+                        <Member Name="ProgressTotaliser" Datatype="Real">
+                          <StartValue>0.0</StartValue>
+                        </Member>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1025_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="IF" Datatype="&quot;TetraPakV50_9_Params&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="Commando" Datatype="Struct">
+                    <Member Name="Commando_04" Datatype="Struct">
+                      <Member Name="IOLStat" Datatype="DWord">
+                        <StartValue>DWORD#16#0001_0237</StartValue>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1027_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="IF" Datatype="&quot;TetraPakV50_9_Params&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="Commando" Datatype="Struct">
+                    <Member Name="Commando_04" Datatype="Struct">
+                      <Member Name="IOLStat" Datatype="DWord">
+                        <StartValue>DWORD#16#0001_0283</StartValue>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V1083_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="I_DataStorage" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+                <Member Name="I_BlockParam" Datatype="Bool">
+                  <StartValue>TRUE</StartValue>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="IF" Datatype="&quot;TetraPakV50_9_Params&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="StandardStructure" Datatype="Struct">
+                  <Member Name="Commando" Datatype="Struct">
+                    <Member Name="Commando_04" Datatype="Struct">
+                      <Member Name="IOLStat" Datatype="DWord">
+                        <StartValue>DWORD#16#0000_1023</StartValue>
+                      </Member>
+                    </Member>
+                  </Member>
+                </Member>
+              </Section>
+            </Sections>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="DI_100_012_X1_1p2" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PN_100, Node 12, X1.1p2 - PG_EOL_CS</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="CTX2274" Datatype="&quot;IFM_LDL_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value_c" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+          <Member Name="Value_t" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0936" Datatype="&quot;TetraPakV50_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="OUT" Datatype="Struct">
+            <Member Name="ValvePosition" Datatype="Real">
+              <StartValue>0.0</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="V0936_Params" Datatype="&quot;TetraPakV50_9_UDTNest&quot;" Remanence="Retain" />
+    <Member Name="PTX0945" Datatype="&quot;IFM_PN3594_IO&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Value" Datatype="Real">
+            <StartValue>0.0</StartValue>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>PG_Devices</Name>
+      <Namespace />
+      <Number>28</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

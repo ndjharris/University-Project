@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>HGS</HeaderAuthor>
+      <HeaderFamily>SERVICE</HeaderFamily>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="HMI" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">HMI data structure</MultiLanguageText>
+      </Comment>
+      <Member Name="ROUTE_ID" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route number running</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_NUMBER" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Current step number</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_IDENT_TEXT_NUMBER" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence step text number</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_VALUE" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Value of current step data (Time/weight/volume/cycles etc)</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_VALUE_DIMENSION" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step value dimension (0 = None/1=Seconds/2=Minutes/3=Kg/4=Litres)</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ERROR_TEXT_NUMBER" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route start error message number for HMI</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="INF_TEXT_NUMBER" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route information message number for HMI</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_VALUE_REAL" Datatype="Real">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Value of current step data (Time/weight/volume/cycles etc) REAL</MultiLanguageText>
+        </Comment>
+        <StartValue>0.0</StartValue>
+      </Member>
+      <Member Name="NEXT_STEP" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Next step number</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="FAULT" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route fault active flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="NOT_AVAILABLE" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route not available flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="RUNNING" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route running flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="TIMER_HELD" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Timer held flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SEQUENCE_HELD" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence held flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SEQUENCE_ABORTED" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence aborted flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Spare_20_6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Spare_20_7" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SEQ_RUNNING_ONS_MEM" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SEQ_RUNNING_ONS" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SEQ_STOPPED_ONS_MEM" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SEQ_STOPPED_ONS" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Spare_21_4" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Spare_21_5" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Spare_21_6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Route_Healthy" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route Healthy</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="CONTROL" Datatype="Struct" Remanence="Retain">
+      <Member Name="MESSAGE_TIME" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence error message elapsed time</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ERROR_MESSAGE_MEM" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence error message memory</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_TIME" Datatype="DInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Time sequence has been on current step</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="FLAGS" Datatype="Struct" Remanence="Retain">
+      <Member Name="Device_Fault" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Circuit Device in Fault</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Process_Fault" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Circuit Process Fault</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Step_Value_Done" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Current step value decremented to zero</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Sequence_Ended" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence complete flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Step_Change" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step changed flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Step_Count_Enable" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Enable step count down</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+        <StartValue>TRUE</StartValue>
+      </Member>
+      <Member Name="STEP_END" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_1_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step 1.0 - Set Route</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_2_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step 2.0 -</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_3_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step 3.0 -</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_4_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step 4.0 -</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_5_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step 5.0 -</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_6_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step 6.0 -</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Sequence_Start" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Start Signal</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ENCYL_1" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">ENAHVCY Cycle 1 V12/13/21</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ENCYL_2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">ENAHVCY Cycle 2 V12/13/21</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="ENCYL_3" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">ENAHVCY Cycle 3 V12/13/21</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_7_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step 7.0 -</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="STEP_8_0" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Step 8.0</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Clean" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Clean Status Bit</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="TotaliserResetBit" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_2_6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_2_7" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_3" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_4" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_5" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_6" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_7" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_8" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_9" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="HMI_CMD" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Polygon Custard &gt; Gemini CIP Commands</MultiLanguageText>
+      </Comment>
+      <Member Name="Timer_Hold" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Timer Hold</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Timer_Release" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Timer Release</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Hold" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route hold</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Continue" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route continue</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Abort" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route abort</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Start" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Route Start</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_0_6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare Flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_0_7" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare Flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Timer_Hold_Available" Datatype="Bool" />
+      <Member Name="Timer_Release_Available" Datatype="Bool" />
+      <Member Name="Hold_Available" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Enable HMI Hold pb</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Continue_Available" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Enable HMI Resume pb</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Abort_Available" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Enable HMI Abort pb</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Start_Available" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Enable HMI Start pb</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_1_6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare Flag</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="_1_7" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Spare Flag</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="PARAMETERS" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Sequence Parameters</MultiLanguageText>
+      </Comment>
+      <Member Name="PARAM_01" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Parameter - (T6) CIP Product Purge Volume (litres)</MultiLanguageText>
+        </Comment>
+        <StartValue>600</StartValue>
+      </Member>
+      <Member Name="PARAM_02" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Parameter - (T7) CIP Drain Down Time</MultiLanguageText>
+        </Comment>
+        <StartValue>300</StartValue>
+      </Member>
+      <Member Name="PARAM_03" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Parameter - (T13) EOL Barrier Cycle 1(Interval Between Flip Cycles)</MultiLanguageText>
+        </Comment>
+        <StartValue>120</StartValue>
+      </Member>
+      <Member Name="PARAM_04" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Parameter - (T14) EOL Barrier Cycle 2(OPEN V1025)</MultiLanguageText>
+        </Comment>
+        <StartValue>10</StartValue>
+      </Member>
+      <Member Name="PARAM_05" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Parameter - (T15) EOL Barrier Cycle 3(OPEN V1027, V1083)</MultiLanguageText>
+        </Comment>
+        <StartValue>5</StartValue>
+      </Member>
+      <Member Name="PARAM_03_Act" Datatype="DInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Parameter - (T13) EOL Barrier Cycle 1- Actual</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="PARAM_04_Act" Datatype="DInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Parameter - (T14) EOL Barrier Cycle 2- Actual</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="PARAM_05_Act" Datatype="DInt">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Sequence Parameter - (T15) EOL Barrier Cycle 3- Actual</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>RTE_404_DB</Name>
+      <Namespace />
+      <Number>404</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

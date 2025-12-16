@@ -1,0 +1,2843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>JOM</HeaderAuthor>
+      <HeaderFamily>UHT</HeaderFamily>
+      <HeaderName>CTRLOBJ</HeaderName>
+      <HeaderVersion>1.4</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="type" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">0=NO-FB, 1=SET-FB, 2=RES-FB, 3=S/R-FB</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="maxTime" Datatype="Int">
+      <Comment>
+        <MultiLanguageText Lang="en-US">MAX FEED-BACK TIME</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="itemInfo" Datatype="&quot;ItemInfo_UDT&quot;">
+      <Comment>
+        <MultiLanguageText Lang="en-US">DATA WORD IN DB10,11,12,13,14</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="itemTimer" Datatype="&quot;ItemTimer_UDT&quot;" />
+    <Member Name="itemStatus" Datatype="&quot;ItemStatus_UDT&quot;" />
+    <Member Name="itemCommand" Datatype="&quot;ItemCommand_UDT&quot;" />
+    <Member Name="resetInput" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">RESET INPUT</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="setInput" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SET INPUT</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="output" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="en-US">OUTPUT</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Void" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>Item_Control</Name>
+      <Namespace />
+      <Number>10</Number>
+      <ProgrammingLanguage>STL</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>==========================================================================
+=                     F C 1 0 - C T R L O B J C T                        =
+==========================================================================
+
+Date : 13.04.99
+Ver. : 0.4
+Init : NAK, JoM
+
+Ver. 0.2 - include : Bit to activate alarm flash lamp 
+                   : feedback type 4 : motor with avalibile and set feedback
+Ver. 0.3 - Include : output blocked - After motor fault (only norferm project)
+
+Ver. 0.4 - Exclude Ver. 0.3, feedback type 4 : motor with avalibile and set     
+           feedback and monitor control.
+
+
+Flag uses in function
+M 4.0 - 1HZ onshot trigger bit (uses to count in seconds)
+
+M 6.0 - set if new feedback alarm (used to activate alarm flash lamp)
+
+
+Data words uses in function
+
+DB10, dw X - command word from SCADA
+Bit 0 = auto
+Bit 1 = Manuel deactivate
+Bit 2 = Manuel activate
+Bit 3 = spare
+Bit 4 = spare
+Bit 5 = spare
+Bit 6 = spare
+
+DB11, dw X - info word to SCADA
+Bit 0  = activated
+Bit 1  = changing
+Bit 2  = faulty 
+Bit 3  = auto_man, Manuel = 1 
+Bit 4  = man_on_off
+Bit 5  = spare
+Bit 6  = spare
+Bit 7  = spare
+Bit 8  = spare 
+Bit 9  = spare 
+Bit 10 = spare 
+Bit 11 = spare  
+Bit 12 = spare 
+Bit 13 = spare 
+Bit 14 = fb_error - Alarm feedback error
+Bit 15 = spare 
+
+DB13 byte x &amp; byte x+1 - Timer work area
+Byte x   = spare     
+Byte x+1 = fb_timer    - Feedback timer item
+
+DB 14, bit 0 - 7 &amp; byte X+1 - Intern status &amp; communication to monitor 
+functions 
+Bit 0  = spare
+Bit 1  = spare
+Bit 2  = spare
+Bit 3  = process_req - Process request from functions
+Bit 4  = process_mirror1 - Mirror process request
+Bit 5  = spare
+Bit 6  = spare
+Bit 7  = spare
+
+Byte x+1 alarm_reset_timer alarm bit reset time 
+Bit 0-3  spare
+Bit 4-7  alarm reset timer for feedback error     
+</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="9" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="55">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="auto_man" />
+      </Symbol>
+      <LineComment>
+        <Text> IF AUTO</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="58">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="Auto" />
+      </Symbol>
+      <LineComment>
+        <Text> AND ProcessReq</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="61">
+    <StlToken Text="O_BRACK" />
+  </StlStatement>
+  <StlStatement UId="62">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="auto_man" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Manuel</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="65">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="man_on_off" />
+      </Symbol>
+      <LineComment>
+        <Text> Manuel on/off</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="68">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="69">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> Set/reset Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="72">
+    <LineComment>
+      <Text>;</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="74">
+    <LineComment>
+      <Text>;</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="76">
+    <LineComment>
+      <Text> Skip simul.</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="78">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEXT" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="80">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="82">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="setInput" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="84">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="86">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="resetInput" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="88">
+    <LineComment>
+      <Text>;</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="90">
+    <LabelDeclaration>
+      <Label Name="NEXT" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>                       CONTROL OUTPUT</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="12" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text> ACTUATING</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="92">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="Auto" />
+      </Symbol>
+      <LineComment>
+        <Text> IF ProcessReq</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="95">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="Process_Mirror" />
+      </Symbol>
+      <LineComment>
+        <Text> AND NOT PRMirror</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="98">
+    <StlToken Text="O_BRACK" />
+    <LineComment>
+      <Text> OR</Text>
+    </LineComment>
+  </StlStatement>
+  <StlStatement UId="100">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="Auto" />
+      </Symbol>
+      <LineComment>
+        <Text> IF NOT ProcessReq</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="103">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="Process_Mirror" />
+      </Symbol>
+      <LineComment>
+        <Text> AND PRMirror</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="106">
+    <StlToken Text="BRACKET" />
+  </StlStatement>
+  <StlStatement UId="107">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="L1" />
+      <LineComment>
+        <Text> Goto L1</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="110">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEX3" />
+      <LineComment>
+        <Text>NEXT;        // ELSE Next</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="113">
+    <LineComment>
+      <Text>;                      // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="115">
+    <LabelDeclaration>
+      <Label Name="L1" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> Reset FeedbackTimer</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="119">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemTimer" />
+        <Component Name="fb_timer" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="121">
+    <LineComment>
+      <Text>;</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="123">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="Auto" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="125">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="Process_Mirror" />
+      </Symbol>
+      <LineComment>
+        <Text> PRMirror=ProcessReq</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="128">
+    <LineComment>
+      <Text>;</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="130">
+    <LabelDeclaration>
+      <Label Name="NEX3" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>CHANGE CONTROL</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="22" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="23" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text> CHANGE CONTROL</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="27" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="135">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Auto" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="31">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Locate" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="37">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Man_Act" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="43">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Man_DeAct" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="53">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Teach" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="61">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="66">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="71">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="73">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="75">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="77">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="79">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="81">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="83">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SV_2SelectionBit" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="85">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SV_3SelectionBit" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="23">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="141">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="INFO" />
+      <LineComment>
+        <Text> if commamd bits = 0 then no commands</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="144">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="116">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Auto" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="150">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="auto_man" />
+      </Symbol>
+      <LineComment>
+        <Text> Auto/manual</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="153">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="clea" />
+      <LineComment>
+        <Text> jump to clear command word</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="156">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="118">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Man_DeAct" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="164">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="auto_man" />
+      </Symbol>
+      <LineComment>
+        <Text> Auto/manual</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="167">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="man_on_off" />
+      </Symbol>
+      <LineComment>
+        <Text> manual on/off</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="170">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="clea" />
+      <LineComment>
+        <Text> jump to clear command word</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="173">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="120">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Man_Act" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="181">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="auto_man" />
+      </Symbol>
+      <LineComment>
+        <Text> Auto/manual</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="184">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="man_on_off" />
+      </Symbol>
+      <LineComment>
+        <Text> manuel on/off</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="187">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="clea" />
+      <LineComment>
+        <Text> jump to clear command word</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="190">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="191">
+    <LabelDeclaration>
+      <Label Name="clea" />
+    </LabelDeclaration>
+    <StlToken Text="SET" />
+  </StlStatement>
+  <StlStatement UId="21">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Auto" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="50">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Locate" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="87">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Man_Act" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="89">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Man_DeAct" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="91">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="Teach" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="93">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="95">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="97">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="99">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="101">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="103">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="105">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="107">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="109">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SV_2SelectionBit" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="111">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SV_3SelectionBit" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="113">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemCommand" />
+        <Component Name="SpareBool_10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="194">
+    <LineComment>
+      <Text> clear command word</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="197">
+    <LineComment>
+      <Text>;=========================== Scada info ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="199">
+    <LabelDeclaration>
+      <Label Name="INFO" />
+    </LabelDeclaration>
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="fb_error" />
+      </Symbol>
+      <LineComment>
+        <Text> feedback error</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="203">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="faulty" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="205">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="auto_man" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="207">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="ManualSelected" />
+      </Symbol>
+      <LineComment>
+        <Text>Show Manual selected on SCADA</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="210">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="resetInput" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="212">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="Reset_FB" />
+      </Symbol>
+      <LineComment>
+        <Text>Show Reset FB in "Item Info &amp; Operation" popup</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="215">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="setInput" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="217">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="Set_FB" />
+      </Symbol>
+      <LineComment>
+        <Text>Show Set FB in "Item Info &amp; Operation" popup</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="220">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="221">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="type" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="223">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> IF Type=NoFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="226">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="227">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="T0" />
+      <LineComment>
+        <Text> Goto T0</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="230">
+    <StlToken Text="CAC" />
+  </StlStatement>
+  <StlStatement UId="231">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> IF Type=SetFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="234">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="235">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="T1" />
+      <LineComment>
+        <Text> Goto T1</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="238">
+    <StlToken Text="CAC" />
+  </StlStatement>
+  <StlStatement UId="239">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> IF Type=S/R FB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="242">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="243">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="T1" />
+      <LineComment>
+        <Text> Goto T1</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="246">
+    <StlToken Text="CAC" />
+  </StlStatement>
+  <StlStatement UId="247">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> IF Type=ResFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="250">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="251">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="T2" />
+      <LineComment>
+        <Text> Goto T2</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="254">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEX4" />
+      <LineComment>
+        <Text>NEXT;       // ELSE Goto Next</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="257">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="259">
+    <LineComment>
+      <Text>;                     // = NO FB =</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="261">
+    <LabelDeclaration>
+      <Label Name="T0" />
+    </LabelDeclaration>
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="265">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="ACT" />
+      <LineComment>
+        <Text> Goto Activated</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="268">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="DEAC" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="270">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="272">
+    <LineComment>
+      <Text>;                     // = SET FB , SET/RES FB =</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="274">
+    <LabelDeclaration>
+      <Label Name="T1" />
+    </LabelDeclaration>
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="278">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="setInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND NOT SetFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="281">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="CHAN" />
+      <LineComment>
+        <Text> Goto Changing</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="284">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="287">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="setInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND SetFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="290">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="ACT" />
+      <LineComment>
+        <Text> Goto Activated</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="293">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="DEAC" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="295">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="297">
+    <LineComment>
+      <Text>;                     // = RES FB =</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="299">
+    <LabelDeclaration>
+      <Label Name="T2" />
+    </LabelDeclaration>
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="303">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="resetInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND ResFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="306">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="CHAN" />
+      <LineComment>
+        <Text> Goto Changing</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="309">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="312">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="resetInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND NOT ResFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="315">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="ACT" />
+      <LineComment>
+        <Text> Goto Activated</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="318">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="DEAC" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="320">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="322">
+    <LabelDeclaration>
+      <Label Name="DEAC" />
+    </LabelDeclaration>
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="activated" />
+      </Symbol>
+      <LineComment>
+        <Text> Update = deactivated</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="326">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="changing" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="328">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEX4" />
+      <LineComment>
+        <Text>NEXT;</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="331">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="333">
+    <LabelDeclaration>
+      <Label Name="CHAN" />
+    </LabelDeclaration>
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="activated" />
+      </Symbol>
+      <LineComment>
+        <Text> Update = activated</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="337">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="changing" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="339">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEX4" />
+      <LineComment>
+        <Text>NEXT;</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="342">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="344">
+    <LabelDeclaration>
+      <Label Name="ACT" />
+    </LabelDeclaration>
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="activated" />
+      </Symbol>
+      <LineComment>
+        <Text> Update = activated</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="348">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="changing" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="350">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEX4" />
+      <LineComment>
+        <Text>NEXT;</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="353">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="355">
+    <LabelDeclaration>
+      <Label Name="NEX4" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Scada info and command
+
+
+;=========================== Scada command ================================</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="32" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="33" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="34" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="35" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text> SCADA INFO &amp; command</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="38" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="357">
+    <StlToken Text="AN" />
+    <Access Scope="GlobalVariable">
+      <Symbol>
+        <Component Name="1hz_oneshot_valve handle" />
+      </Symbol>
+      <LineComment>
+        <Text> IF NOT TimeSec</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="360">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="NEX5" />
+      <LineComment>
+        <Text>NEXT;       // Goto Next</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="363">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="365">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="366">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="type" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="368">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> IF Type=NoFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="371">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="372">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="NEX5" />
+      <LineComment>
+        <Text>NEXT;       // Goto Next</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="375">
+    <StlToken Text="CAC" />
+  </StlStatement>
+  <StlStatement UId="376">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> IF Type=SetFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="379">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="380">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="T1c" />
+      <LineComment>
+        <Text>T1;         // Goto T1</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="383">
+    <StlToken Text="CAC" />
+  </StlStatement>
+  <StlStatement UId="384">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>2</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> IF Type=ResFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="387">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="388">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="T2c" />
+      <LineComment>
+        <Text>T2;         // Goto T2</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="391">
+    <StlToken Text="CAC" />
+  </StlStatement>
+  <StlStatement UId="392">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>3</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> IF Type=S/R-FB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="395">
+    <StlToken Text="EQ_I" />
+  </StlStatement>
+  <StlStatement UId="396">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="T3c" />
+      <LineComment>
+        <Text>T3;         // Goto T3</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="399">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEX5" />
+      <LineComment>
+        <Text>NEXT;</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="402">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="404">
+    <LineComment>
+      <Text>;                     // = SET FB =</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="406">
+    <LineComment>
+      <Text>T1:</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="408">
+    <LabelDeclaration>
+      <Label Name="T1c" />
+    </LabelDeclaration>
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="412">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="setInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND SetFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="415">
+    <StlToken Text="O" />
+    <LineComment>
+      <Text>OK;         // Goto OK</Text>
+    </LineComment>
+  </StlStatement>
+  <StlStatement UId="417">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF NOT Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="420">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="setInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND NOT SetFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="423">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="OK5" />
+      <LineComment>
+        <Text>OK;         // Goto OK</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="426">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="CHAL" />
+      <LineComment>
+        <Text> Else goto CheckAlarm</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="429">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="431">
+    <LineComment>
+      <Text>;                     // = RES FB =</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="433">
+    <LineComment>
+      <Text>T2:</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="435">
+    <LabelDeclaration>
+      <Label Name="T2c" />
+    </LabelDeclaration>
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="439">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="resetInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND NOT ResFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="442">
+    <StlToken Text="O" />
+    <LineComment>
+      <Text>OK;         // Goto OK</Text>
+    </LineComment>
+  </StlStatement>
+  <StlStatement UId="444">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF NOT Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="447">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="resetInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND ResFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="450">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="OK5" />
+      <LineComment>
+        <Text>OK;         // Goto OK</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="453">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="CHAL" />
+      <LineComment>
+        <Text> Else goto CheckAlarm</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="456">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="458">
+    <LineComment>
+      <Text>;                     // = S/R-FB =</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="460">
+    <LineComment>
+      <Text>T3:</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="462">
+    <LabelDeclaration>
+      <Label Name="T3c" />
+    </LabelDeclaration>
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="466">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="setInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND SetFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="469">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="resetInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND NOT ResFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="472">
+    <StlToken Text="O" />
+    <LineComment>
+      <Text>OK;         // Goto OK</Text>
+    </LineComment>
+  </StlStatement>
+  <StlStatement UId="474">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="output" />
+      </Symbol>
+      <LineComment>
+        <Text> IF NOT Output</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="477">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="setInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND NOT SetFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="480">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="resetInput" />
+      </Symbol>
+      <LineComment>
+        <Text> AND ResFB</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="483">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="OK5" />
+      <LineComment>
+        <Text>OK;         // Goto OK</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="486">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="CHAL" />
+      <LineComment>
+        <Text> Else goto CheckAlarm</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="489">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="490">
+    <LabelDeclaration>
+      <Label Name="OK5" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="493">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemTimer" />
+        <Component Name="fb_timer" />
+      </Symbol>
+      <LineComment>
+        <Text> Reset TimeCont.</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="496">
+    <LineComment>
+      <Text> Reset Cont.Error</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="498">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEX5" />
+      <LineComment>
+        <Text>NEXT;</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="501">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="503">
+    <LabelDeclaration>
+      <Label Name="CHAL" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemTimer" />
+        <Component Name="fb_timer" />
+      </Symbol>
+      <LineComment>
+        <Text> Adjust TimeCont.</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="507">
+    <StlToken Text="INC" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="509">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemTimer" />
+        <Component Name="fb_timer" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="511">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>100</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="513">
+    <StlToken Text="LE_I" />
+  </StlStatement>
+  <StlStatement UId="514">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="CH1" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="516">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>100</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="518">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemTimer" />
+        <Component Name="fb_timer" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="520">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="522">
+    <LabelDeclaration>
+      <Label Name="CH1" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemTimer" />
+        <Component Name="fb_timer" />
+      </Symbol>
+      <LineComment>
+        <Text> IF TimeCont. &gt;=</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="526">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="maxTime" />
+      </Symbol>
+      <LineComment>
+        <Text> Max feedback time</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="529">
+    <StlToken Text="GE_I" />
+  </StlStatement>
+  <StlStatement UId="530">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="ALRM" />
+      <LineComment>
+        <Text> Goto Alarm</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="533">
+    <LineComment>
+      <Text> Reset Cont.Error</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="535">
+    <StlToken Text="JU" />
+    <Access Scope="Label">
+      <Label Name="NEX5" />
+      <LineComment>
+        <Text>NEXT;</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="538">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="540">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="541">
+    <LabelDeclaration>
+      <Label Name="ALRM" />
+    </LabelDeclaration>
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="fb_error" />
+      </Symbol>
+      <LineComment>
+        <Text> Set Cont.Error</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="545">
+    <StlToken Text="S" />
+    <Access Scope="GlobalVariable">
+      <Symbol>
+        <Component Name="Set_alarm_lamp_monitor" />
+      </Symbol>
+      <LineComment>
+        <Text> If new monitor alarm set alarm flash lamp</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="548">
+    <StlToken Text="SET" />
+  </StlStatement>
+  <StlStatement UId="549">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="fb_error" />
+      </Symbol>
+      <LineComment>
+        <Text> Set Cont.Error</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="552">
+    <LineComment>
+      <Text>                                 </Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="554">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="AlarmResetTimer" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="556">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Word</ConstantType>
+        <ConstantValue>16#0050</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> Wait 5 seconds to reset alarm bits</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="559">
+    <StlToken Text="OW" />
+    <LineComment>
+      <Text> Larst 4 bits time reset monitor/process alarm </Text>
+    </LineComment>
+  </StlStatement>
+  <StlStatement UId="561">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="AlarmResetTimer" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="563">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="565">
+    <LabelDeclaration>
+      <Label Name="NEX5" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>FEEDBACK TEST </Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="40" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="43" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="44" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="45" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text> CONT.MONITORING</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="47" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="49" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="4D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="567">
+    <StlToken Text="AN" />
+    <Access Scope="GlobalVariable">
+      <Symbol>
+        <Component Name="1hz_oneshot_valve handle" />
+      </Symbol>
+      <LineComment>
+        <Text> IF NOT TimeSec</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="570">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="nex6" />
+      <LineComment>
+        <Text> Goto Next</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="573">
+    <LineComment>
+      <Text>;                     // ================================</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="575">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="AlarmResetTimer" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="577">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="578">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Word</ConstantType>
+        <ConstantValue>16#00F0</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> larst 4 bit in byte = counter</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="581">
+    <StlToken Text="AW" />
+  </StlStatement>
+  <StlStatement UId="582">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="584">
+    <StlToken Text="EQ_I" />
+    <LineComment>
+      <Text> alarm high in min 5 seconds</Text>
+    </LineComment>
+  </StlStatement>
+  <StlStatement UId="586">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemInfo" />
+        <Component Name="fb_error" />
+      </Symbol>
+      <LineComment>
+        <Text> Reset Cont.Error</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="589">
+    <StlToken Text="JC" />
+    <Access Scope="Label">
+      <Label Name="nex6" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="591">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="AlarmResetTimer" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="593">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Word</ConstantType>
+        <ConstantValue>16#0010</ConstantValue>
+      </Constant>
+      <LineComment>
+        <Text> Count 1 second down, in larst 4 bit time reset F.B. alarm</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="596">
+    <StlToken Text="SUB_I" />
+  </StlStatement>
+  <StlStatement UId="597">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="itemStatus" />
+        <Component Name="AlarmResetTimer" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="599">
+    <LabelDeclaration>
+      <Label Name="nex6" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Reset alarm bit after 5 seconds</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="51" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="52" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="53" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="54" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="55" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="56" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Reset alarm bits</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="58" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="59" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="5E" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="5F" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Control object</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="60" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="61" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="62" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="63" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="64" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="65" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

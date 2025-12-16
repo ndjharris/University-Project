@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="IN" Datatype="Struct">
+      <Member Name="Addr" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">First Byte address of 4 byte address space</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Locate" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Rapid Flash LED's</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Activate" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Activate pilot valve</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="OUT" Datatype="Struct">
+      <Member Name="ValvePosition" Datatype="Real">
+        <Comment>
+          <MultiLanguageText Lang="en-US">0-100%</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="NumarState" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">0=diagPassive,1=diagActive,2=MaintenanceRequired,3=OutOfSpec,4=warn,5=error</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="OperationState" Datatype="Byte">
+        <Comment>
+          <MultiLanguageText Lang="en-US">See block comment</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="POS2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">True = process valve is in end position defined by activated pilot valve.</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="POS1" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">True = process valve is in end position defined by deactivated pilot valve.</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="EndPositionClose" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">True = Process Valve is closed.</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="EndPositionOpen" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">True = Process Valve is open.</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_DI4" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output signal status Pin 4</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_DI2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output signal status Pin 2</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_DA" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output device recognised</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_DE" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output device error event has appeared</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="O_PQ" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Output port qualifer proces data valid</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="IN_OUT" Datatype="Struct">
+      <Member Name="HMI_CMD" Datatype="Word" />
+      <Member Name="HMI_INFO" Datatype="Word" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>IO Burkett Type 8691 r3</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

@@ -1,0 +1,1070 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="TTX_09_30" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">IFM TA2502</MultiLanguageText>
+      </Comment>
+      <Member Name="ProcessData" Datatype="Struct">
+        <Member Name="Temperature" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">act. temperature [C]</MultiLanguageText>
+          </Comment>
+          <StartValue>0.0</StartValue>
+        </Member>
+      </Member>
+      <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">operating acyclic communication</MultiLanguageText>
+        </Comment>
+        <Sections>
+          <Section Name="None">
+            <Member Name="I_DataStorage" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="I_BlockParam" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+      <Member Name="Commands" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">commands interface</MultiLanguageText>
+        </Comment>
+        <Member Name="Commando_1" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(1) Upload Start</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_2" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(2) Upload End</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_3" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(3) Download Start</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_4" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(4) Download End</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_5" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(5) Store</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_6" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(6) Break</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_7" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(130) Restore Factory Settings</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_8" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(240) Test Event 8DFE appears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_9" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(241) Test Event 8DFE disappears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_10" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(242) Test Event 8DFF appears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_11" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(243) Test Event 8DFF disappears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_12" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_13" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_14" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_15" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_16" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_17" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_18" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_19" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_20" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_21" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_22" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_23" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_24" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+      </Member>
+      <Member Name="IF" Datatype="&quot;IF_TA2502&quot;" />
+      <Member Name="PQI" Datatype="&quot;PQI_IF&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">PQI diagnostic information</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="TTX_09_31" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">IFM TA2502</MultiLanguageText>
+      </Comment>
+      <Member Name="ProcessData" Datatype="Struct">
+        <Member Name="Temperature" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">act. temperature [C]</MultiLanguageText>
+          </Comment>
+          <StartValue>0.0</StartValue>
+        </Member>
+      </Member>
+      <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">operating acyclic communication</MultiLanguageText>
+        </Comment>
+        <Sections>
+          <Section Name="None">
+            <Member Name="I_DataStorage" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="I_BlockParam" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+      <Member Name="Commands" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">commands interface</MultiLanguageText>
+        </Comment>
+        <Member Name="Commando_1" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(1) Upload Start</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_2" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(2) Upload End</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_3" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(3) Download Start</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_4" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(4) Download End</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_5" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(5) Store</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_6" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(6) Break</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_7" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(130) Restore Factory Settings</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_8" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(240) Test Event 8DFE appears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_9" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(241) Test Event 8DFE disappears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_10" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(242) Test Event 8DFF appears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_11" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(243) Test Event 8DFF disappears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_12" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_13" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_14" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_15" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_16" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_17" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_18" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_19" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_20" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_21" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_22" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_23" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_24" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+      </Member>
+      <Member Name="IF" Datatype="&quot;IF_TA2502&quot;" />
+      <Member Name="PQI" Datatype="&quot;PQI_IF&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">PQI diagnostic information</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="CTX_09_30" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">IFM LDL101</MultiLanguageText>
+      </Comment>
+      <Member Name="ProcessData" Datatype="Struct">
+        <Member Name="Conductivity" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">act. conductivity [S]</MultiLanguageText>
+          </Comment>
+          <StartValue>0.0</StartValue>
+        </Member>
+        <Member Name="Temperature1" Datatype="Real">
+          <Comment>
+            <MultiLanguageText Lang="en-US">act. temperature [C]</MultiLanguageText>
+          </Comment>
+          <StartValue>0.0</StartValue>
+        </Member>
+      </Member>
+      <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">operating acyclic communication</MultiLanguageText>
+        </Comment>
+        <Sections>
+          <Section Name="None">
+            <Member Name="I_DataStorage" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="I_BlockParam" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+      <Member Name="Commands" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">commands interface</MultiLanguageText>
+        </Comment>
+        <Member Name="Commando_1" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(1) Upload Start</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_2" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(2) Upload End</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_3" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(3) Download Start</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_4" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(4) Download End</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_5" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(5) Store</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_6" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(6) Break</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_7" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(130) Restore Factory Settings</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_8" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(240) Test Event 8DFE appears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_9" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(241) Test Event 8DFE disappears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_10" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(242) Test Event 8DFF appears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_11" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(243) Test Event 8DFF disappears</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_12" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_13" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_14" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_15" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_16" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_17" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_18" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_19" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_20" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_21" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_22" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_23" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_24" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+      </Member>
+      <Member Name="IF" Datatype="&quot;IF_LDL101&quot;" />
+      <Member Name="PQI" Datatype="&quot;PQI_IF&quot;">
+        <Comment>
+          <MultiLanguageText Lang="en-US">PQI diagnostic information</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="V_09_30" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Burkett CH Type 8691</MultiLanguageText>
+      </Comment>
+      <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+        <Sections>
+          <Section Name="None">
+            <Member Name="I_DataStorage" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="I_BlockParam" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+      <Member Name="Commands" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">commands interface</MultiLanguageText>
+        </Comment>
+        <Member Name="Commando_1" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(128) Device Reset</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_2" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(130) Restore Factory Settings</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_3" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(160) Start Auto Teach function</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_4" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(161) Start Manual Teach function</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_5" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_6" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_7" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_8" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_9" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_10" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_11" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_12" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_13" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_14" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_15" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_16" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_17" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_18" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_19" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_20" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_21" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_22" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_23" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_24" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+      </Member>
+      <Member Name="IO" Datatype="&quot;IO Burkett Type 8691&quot;">
+        <Sections>
+          <Section Name="None">
+            <Member Name="V" Datatype="Struct">
+              <Member Name="_IO" Datatype="Struct">
+                <Member Name="OUT" Datatype="Struct">
+                  <Member Name="ValvePosition" Datatype="Real">
+                    <StartValue>0.0</StartValue>
+                  </Member>
+                </Member>
+              </Member>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+      <Member Name="IF" Datatype="&quot;IF Burkett Type 8691 IO&quot;">
+        <Sections>
+          <Section Name="None">
+            <Member Name="StandardStructure" Datatype="Struct">
+              <Member Name="DeviceParameters" Datatype="Struct">
+                <Member Name="Parameter_08" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="UpperEndPosition" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_09" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="LowerEndPosition" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_12" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="Stroke" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_20" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="TravelAccumlator" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_21" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="TravelAccResettable" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_22" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="TravelAccLimit" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_29" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="OpeningTimeLimit" Datatype="Int">
+                      <StartValue>2000</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_30" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="ClosingTimeLimit" Datatype="Int">
+                      <StartValue>2000</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_31" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="TimeTolerance" Datatype="Byte">
+                      <StartValue>BYTE#16#0A</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_39" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="SwitchingTimeout" Datatype="Int">
+                      <StartValue>3000</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+              </Member>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+    </Member>
+    <Member Name="V_09_31" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Burkett CH Type 8691</MultiLanguageText>
+      </Comment>
+      <Member Name="OP" Datatype="&quot;OP_Int&quot;">
+        <Sections>
+          <Section Name="None">
+            <Member Name="I_DataStorage" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+            <Member Name="I_BlockParam" Datatype="Bool">
+              <StartValue>TRUE</StartValue>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+      <Member Name="Commands" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">commands interface</MultiLanguageText>
+        </Comment>
+        <Member Name="Commando_1" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(128) Device Reset</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_2" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(130) Restore Factory Settings</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_3" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(160) Start Auto Teach function</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_4" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">(161) Start Manual Teach function</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_5" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_6" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_7" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_8" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_9" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_10" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_11" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_12" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_13" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_14" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_15" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_16" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_17" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_18" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_19" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_20" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_21" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_22" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_23" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Commando_24" Datatype="Bool">
+          <Comment>
+            <MultiLanguageText Lang="en-US">not used</MultiLanguageText>
+          </Comment>
+        </Member>
+      </Member>
+      <Member Name="IO" Datatype="&quot;IO Burkett Type 8691&quot;">
+        <Sections>
+          <Section Name="None">
+            <Member Name="V" Datatype="Struct">
+              <Member Name="_IO" Datatype="Struct">
+                <Member Name="OUT" Datatype="Struct">
+                  <Member Name="ValvePosition" Datatype="Real">
+                    <StartValue>0.0</StartValue>
+                  </Member>
+                </Member>
+              </Member>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+      <Member Name="IF" Datatype="&quot;IF Burkett Type 8691 IO&quot;">
+        <Sections>
+          <Section Name="None">
+            <Member Name="StandardStructure" Datatype="Struct">
+              <Member Name="DeviceParameters" Datatype="Struct">
+                <Member Name="Parameter_08" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="UpperEndPosition" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_09" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="LowerEndPosition" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_12" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="Stroke" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_20" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="TravelAccumlator" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_21" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="TravelAccResettable" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_22" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="TravelAccLimit" Datatype="Real">
+                      <StartValue>0.0</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_29" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="OpeningTimeLimit" Datatype="Int">
+                      <StartValue>2000</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_30" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="ClosingTimeLimit" Datatype="Int">
+                      <StartValue>2000</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_31" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="TimeTolerance" Datatype="Byte">
+                      <StartValue>BYTE#16#0A</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+                <Member Name="Parameter_39" Datatype="Struct">
+                  <Member Name="Value" Datatype="Struct">
+                    <Member Name="SwitchingTimeout" Datatype="Int">
+                      <StartValue>3000</StartValue>
+                    </Member>
+                  </Member>
+                </Member>
+              </Member>
+            </Member>
+          </Section>
+        </Sections>
+      </Member>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>IF_Device</Name>
+      <Namespace />
+      <Number>27</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

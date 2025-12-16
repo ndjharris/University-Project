@@ -1,0 +1,762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="ACT" Datatype="&quot;_AC_Interface&quot;" Remanence="Retain" />
+    <Member Name="acInt" Datatype="Array[0..31] of &quot;_AC_Interface&quot;" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Process Object pointers</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="ia" Datatype="Struct">
+            <Member Name="dbno" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="3">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>27</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="sta" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>10</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>1044</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>2082</StartValue>
+              </Subelement>
+              <Subelement Path="3">
+                <StartValue>3452</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>5508</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>4634</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>6134</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>7634</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>9134</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>10102</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>11070</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>12038</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>13006</StartValue>
+              </Subelement>
+              <Subelement Path="13">
+                <StartValue>314</StartValue>
+              </Subelement>
+              <Subelement Path="14">
+                <StartValue>1178</StartValue>
+              </Subelement>
+              <Subelement Path="15">
+                <StartValue>2042</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>13974</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>15062</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>16030</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>17530</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>18498</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>19466</StartValue>
+              </Subelement>
+              <Subelement Path="23">
+                <StartValue>2906</StartValue>
+              </Subelement>
+              <Subelement Path="24">
+                <StartValue>3770</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>20460</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="al" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>1022</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>1022</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>1346</StartValue>
+              </Subelement>
+              <Subelement Path="3">
+                <StartValue>2034</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>2034</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>1226</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>1226</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>1226</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="13">
+                <StartValue>858</StartValue>
+              </Subelement>
+              <Subelement Path="14">
+                <StartValue>858</StartValue>
+              </Subelement>
+              <Subelement Path="15">
+                <StartValue>858</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>1082</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>1226</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>962</StartValue>
+              </Subelement>
+              <Subelement Path="23">
+                <StartValue>858</StartValue>
+              </Subelement>
+              <Subelement Path="24">
+                <StartValue>858</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>962</StartValue>
+              </Subelement>
+            </Member>
+          </Member>
+          <Member Name="IHW" Datatype="HW_ANY">
+            <Subelement Path="0">
+              <StartValue>361</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>362</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>363</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>364</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>365</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>352</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>353</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>354</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>370</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>371</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>372</StartValue>
+            </Subelement>
+            <Subelement Path="11">
+              <StartValue>373</StartValue>
+            </Subelement>
+            <Subelement Path="12">
+              <StartValue>374</StartValue>
+            </Subelement>
+            <Subelement Path="13">
+              <StartValue>375</StartValue>
+            </Subelement>
+            <Subelement Path="14">
+              <StartValue>379</StartValue>
+            </Subelement>
+            <Subelement Path="15">
+              <StartValue>380</StartValue>
+            </Subelement>
+            <Subelement Path="16">
+              <StartValue>384</StartValue>
+            </Subelement>
+            <Subelement Path="17">
+              <StartValue>388</StartValue>
+            </Subelement>
+            <Subelement Path="18">
+              <StartValue>389</StartValue>
+            </Subelement>
+            <Subelement Path="19">
+              <StartValue>390</StartValue>
+            </Subelement>
+            <Subelement Path="20">
+              <StartValue>391</StartValue>
+            </Subelement>
+            <Subelement Path="21">
+              <StartValue>392</StartValue>
+            </Subelement>
+            <Subelement Path="22">
+              <StartValue>393</StartValue>
+            </Subelement>
+            <Subelement Path="23">
+              <StartValue>394</StartValue>
+            </Subelement>
+            <Subelement Path="24">
+              <StartValue>395</StartValue>
+            </Subelement>
+            <Subelement Path="25">
+              <StartValue>355</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="IIp" Datatype="Int">
+            <Subelement Path="0">
+              <StartValue>1</StartValue>
+            </Subelement>
+            <Subelement Path="1">
+              <StartValue>2</StartValue>
+            </Subelement>
+            <Subelement Path="2">
+              <StartValue>3</StartValue>
+            </Subelement>
+            <Subelement Path="3">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="4">
+              <StartValue>5</StartValue>
+            </Subelement>
+            <Subelement Path="5">
+              <StartValue>1</StartValue>
+            </Subelement>
+            <Subelement Path="6">
+              <StartValue>2</StartValue>
+            </Subelement>
+            <Subelement Path="7">
+              <StartValue>3</StartValue>
+            </Subelement>
+            <Subelement Path="8">
+              <StartValue>1</StartValue>
+            </Subelement>
+            <Subelement Path="9">
+              <StartValue>2</StartValue>
+            </Subelement>
+            <Subelement Path="10">
+              <StartValue>3</StartValue>
+            </Subelement>
+            <Subelement Path="11">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="12">
+              <StartValue>5</StartValue>
+            </Subelement>
+            <Subelement Path="13">
+              <StartValue>6</StartValue>
+            </Subelement>
+            <Subelement Path="14">
+              <StartValue>1</StartValue>
+            </Subelement>
+            <Subelement Path="15">
+              <StartValue>2</StartValue>
+            </Subelement>
+            <Subelement Path="16">
+              <StartValue>6</StartValue>
+            </Subelement>
+            <Subelement Path="17">
+              <StartValue>1</StartValue>
+            </Subelement>
+            <Subelement Path="18">
+              <StartValue>2</StartValue>
+            </Subelement>
+            <Subelement Path="19">
+              <StartValue>3</StartValue>
+            </Subelement>
+            <Subelement Path="20">
+              <StartValue>4</StartValue>
+            </Subelement>
+            <Subelement Path="21">
+              <StartValue>5</StartValue>
+            </Subelement>
+            <Subelement Path="22">
+              <StartValue>6</StartValue>
+            </Subelement>
+            <Subelement Path="23">
+              <StartValue>7</StartValue>
+            </Subelement>
+            <Subelement Path="24">
+              <StartValue>8</StartValue>
+            </Subelement>
+            <Subelement Path="25">
+              <StartValue>5</StartValue>
+            </Subelement>
+          </Member>
+          <Member Name="op" Datatype="Struct">
+            <Member Name="dbno" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="3">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="16">
+                <StartValue>0</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="sta" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>4</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>1038</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>2076</StartValue>
+              </Subelement>
+              <Subelement Path="3">
+                <StartValue>3430</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>5486</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>4628</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>6128</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>7628</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>9128</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>10096</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>11064</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>12032</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>13000</StartValue>
+              </Subelement>
+              <Subelement Path="13">
+                <StartValue>308</StartValue>
+              </Subelement>
+              <Subelement Path="14">
+                <StartValue>1172</StartValue>
+              </Subelement>
+              <Subelement Path="15">
+                <StartValue>2036</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>13968</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>15056</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>16024</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>17524</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>18492</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>19460</StartValue>
+              </Subelement>
+              <Subelement Path="23">
+                <StartValue>2900</StartValue>
+              </Subelement>
+              <Subelement Path="24">
+                <StartValue>3764</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>20454</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="al" Datatype="Int">
+              <Subelement Path="16">
+                <StartValue>0</StartValue>
+              </Subelement>
+            </Member>
+          </Member>
+          <Member Name="cmds" Datatype="Struct">
+            <Member Name="dbno" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="3">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>27</StartValue>
+              </Subelement>
+              <Subelement Path="16">
+                <StartValue>0</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="sta" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>6</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>1040</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>2078</StartValue>
+              </Subelement>
+              <Subelement Path="3">
+                <StartValue>3432</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>5588</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>4630</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>7630</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>9130</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>10098</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>11066</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>12034</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>13002</StartValue>
+              </Subelement>
+              <Subelement Path="13">
+                <StartValue>310</StartValue>
+              </Subelement>
+              <Subelement Path="14">
+                <StartValue>1174</StartValue>
+              </Subelement>
+              <Subelement Path="15">
+                <StartValue>2038</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>13970</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>15058</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>16026</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>17526</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>18494</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>19462</StartValue>
+              </Subelement>
+              <Subelement Path="23">
+                <StartValue>2902</StartValue>
+              </Subelement>
+              <Subelement Path="24">
+                <StartValue>3766</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>20456</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="al" Datatype="Int">
+              <Subelement Path="16">
+                <StartValue>0</StartValue>
+              </Subelement>
+            </Member>
+          </Member>
+          <Member Name="ev" Datatype="Struct">
+            <Member Name="dbno" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="13">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="14">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="15">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="23">
+                <StartValue>0</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="sta" Datatype="Int">
+              <Subelement Path="4">
+                <StartValue>10</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>20</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>30</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>50</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>60</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>70</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>80</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>90</StartValue>
+              </Subelement>
+              <Subelement Path="16">
+                <StartValue>100</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>110</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>120</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>130</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>140</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>150</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>160</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>170</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="al" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="1">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="2">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="13">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="14">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="15">
+                <StartValue>0</StartValue>
+              </Subelement>
+              <Subelement Path="23">
+                <StartValue>0</StartValue>
+              </Subelement>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>acDataPointers</Name>
+      <Namespace />
+      <Number>20</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

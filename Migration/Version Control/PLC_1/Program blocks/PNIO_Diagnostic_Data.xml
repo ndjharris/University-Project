@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <HeaderAuthor>NDJH</HeaderAuthor>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="2_AL1103" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;2~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="3_AL1307" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;3~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="4_AL1307" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;4~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="5_AL1307" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;5~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="6_AL1307" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;6~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="7_AL1307" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;7~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="8_Promag300" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;8~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="9_SinaG120" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;9~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="10_AL1307" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;10~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="11_PNCoup" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;11~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="12_AL1307" Datatype="&quot;DiagnosticUDT&quot;">
+      <Sections>
+        <Section Name="None">
+          <Member Name="hwID" Datatype="HW_ANY">
+            <StartValue ConstantName="&quot;12~IODevice&quot;" />
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="2_AL1103_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="3_AL1307_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="4_AL1307_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="5_AL1307_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="6_AL1307_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="7_AL1307_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="8_Promag300_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="9_SinaG120_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="10_AL1307_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="11_PNCoup_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+    <Member Name="12_AL1307_Historical" Datatype="&quot;DiagnosticUDT&quot;" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>PNIO_Diagnostic_Data</Name>
+      <Namespace />
+      <Number>17</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Data for PNIODiagnostics</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

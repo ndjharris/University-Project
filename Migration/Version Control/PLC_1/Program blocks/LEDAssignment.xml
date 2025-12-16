@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>FLA</HeaderAuthor>
+      <HeaderFamily>UHT</HeaderFamily>
+      <HeaderVersion>1.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="F1_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F1_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F2_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F2_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F3_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F3_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F4_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F4_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F5_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F5_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F6_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F6_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F7_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F7_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F8_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F8_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F9_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F9_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F10_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F10_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F11_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F11_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F12_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F12_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K1_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K1_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K2_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K2_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K3_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K3_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K4_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K4_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K5_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K5_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K6_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K6_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K7_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K7_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K8_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K8_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K9_FLASH" Datatype="Bool" Remanence="Retain">
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="K9_LIGHT" Datatype="Bool" Remanence="Retain">
+      <StartValue>TRUE</StartValue>
+    </Member>
+    <Member Name="K10_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K10_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K11_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K11_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K12_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K12_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K13_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K13_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K14_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K14_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K15_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K15_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K16_FLASH" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K16_LIGHT" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED1" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED2" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED3" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED4" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED5" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED6" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED7" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED8" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED9" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED10" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED11" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED12" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED13" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED14" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED15" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED16" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED17" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED18" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED19" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED20" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED21" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED22" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED23" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_LED24" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F1_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F2_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F3_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F4_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F5_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F6_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F7_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F8_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F9_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F10_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F11_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F12_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F13_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F14_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F15_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F16_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F17_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F18_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F19_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="F20_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K1_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K2_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K3_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K4_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K5_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K6_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K7_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K8_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K9_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K10_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K11_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K12_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K13_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K14_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K15_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="K16_BUTTON" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON1" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON2" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON3" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON4" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON5" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON6" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON7" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON8" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON9" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON10" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON11" Datatype="Bool" Remanence="Retain" />
+    <Member Name="SPARE_BUTTON12" Datatype="Bool" Remanence="Retain" />
+    <Member Name="ResetTotaliserHoursAHV" Datatype="Bool" Remanence="Retain" />
+    <Member Name="Stop_AHV_from_scada" Datatype="Bool" Remanence="Retain" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>LEDAssignment</Name>
+      <Namespace />
+      <Number>4</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

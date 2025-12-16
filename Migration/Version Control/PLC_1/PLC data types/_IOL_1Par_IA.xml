@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="StandardStructure" Datatype="Struct">
+      <Member Name="Header" Datatype="Struct">
+        <Member Name="NumberParameter" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Number of device parameters (Device Identification + Device Parameter)</MultiLanguageText>
+          </Comment>
+          <StartValue>1</StartValue>
+        </Member>
+        <Member Name="AdressParamDownLoad" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress for ParamDownload signals in this struct</MultiLanguageText>
+          </Comment>
+          <StartValue>20</StartValue>
+        </Member>
+        <Member Name="AdressDeviceIndent" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress for Device Identification Parameters in this struct (82 Bytes ea)</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="AdressApplicSpez" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress ApplicationSpezificTag   (82 Bytes ea)  [9]</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="AdressDeviceParam" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress for Device Parameters in this Area (20 Bytes ea) [15]</MultiLanguageText>
+          </Comment>
+          <StartValue>44</StartValue>
+        </Member>
+        <Member Name="AdressKommando" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress for Device Commandos</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="NumberCommandos" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Number of Commandos of the device</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Spare01" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Spare02" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Spare03" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+          </Comment>
+        </Member>
+      </Member>
+      <Member Name="Paramdownload" Datatype="Struct">
+        <Member Name="ParamDownLoadStart" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Parameter Download Start (Only if master and device are V1.1)</MultiLanguageText>
+          </Comment>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="ParamDownLoadEnd" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Parameter Download End (Only if master and device are V1.1)</MultiLanguageText>
+          </Comment>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="ParamDownLoadStore" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Parameter Download Store (Only if master and device are V1.1)</MultiLanguageText>
+          </Comment>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+      </Member>
+      <Member Name="Generic" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Address Device Indent</MultiLanguageText>
+        </Comment>
+        <Member Name="Parameter" Datatype="Struct">
+          <Member Name="Data" Datatype="Array[0..64] of Byte" />
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>16</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>64</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+      </Member>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>_IOL_1Par_IA</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text> DEVICEID : 2224899    IODD Version 1.3
+ VENDOR : Burkett
+Documentation Version : 1.03
+ DATE: 28.08.2023 
+
+ Comment : Burkett_Type8691.rev3_Params
+</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text> Burkett_Type8691.rev3_Params </Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

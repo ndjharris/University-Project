@@ -1,0 +1,1165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="StandardStructure" Datatype="Struct">
+      <Member Name="Header" Datatype="Struct">
+        <Member Name="NumberParameter" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Number of device parameters (Device Identification + Device Parameter)</MultiLanguageText>
+          </Comment>
+          <StartValue>15</StartValue>
+        </Member>
+        <Member Name="AdressParamDownLoad" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress for ParamDownload signals in this struct</MultiLanguageText>
+          </Comment>
+          <StartValue>20</StartValue>
+        </Member>
+        <Member Name="AdressDeviceIndent" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress for Device Identification Parameters in this struct</MultiLanguageText>
+          </Comment>
+          <StartValue>44</StartValue>
+        </Member>
+        <Member Name="AdressApplicSpez" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress ApplicationSpezificTag</MultiLanguageText>
+          </Comment>
+          <StartValue>536</StartValue>
+        </Member>
+        <Member Name="AdressDeviceParam" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress for Device Parameters in this Area</MultiLanguageText>
+          </Comment>
+          <StartValue>618</StartValue>
+        </Member>
+        <Member Name="AdressKommando" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Start adress for Device Commandos</MultiLanguageText>
+          </Comment>
+          <StartValue>778</StartValue>
+        </Member>
+        <Member Name="NumberCommandos" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Number of Commandos of the device</MultiLanguageText>
+          </Comment>
+          <StartValue>5</StartValue>
+        </Member>
+        <Member Name="Spare01" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Spare02" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+          </Comment>
+        </Member>
+        <Member Name="Spare03" Datatype="Int">
+          <Comment>
+            <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+          </Comment>
+        </Member>
+      </Member>
+      <Member Name="Paramdownload" Datatype="Struct">
+        <Member Name="ParamDownLoadStart" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Parameter Download Start (Only if master and device are V1.1)</MultiLanguageText>
+          </Comment>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="ParamDownLoadEnd" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Parameter Download End (Only if master and device are V1.1)</MultiLanguageText>
+          </Comment>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="ParamDownLoadStore" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Parameter Download Store (Only if master and device are V1.1)</MultiLanguageText>
+          </Comment>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+      </Member>
+      <Member Name="DeviceIndentification" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">device indentification parameter</MultiLanguageText>
+        </Comment>
+        <Member Name="V_VendorName" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Vendor Name</MultiLanguageText>
+          </Comment>
+          <Member Name="Text" Datatype="String[64]" />
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>16</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>19</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="V_ProductName" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Product Name</MultiLanguageText>
+          </Comment>
+          <Member Name="Text" Datatype="String[64]" />
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>18</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>6</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="V_ProductText" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Product Text</MultiLanguageText>
+          </Comment>
+          <Member Name="Text" Datatype="String[64]" />
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>20</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>23</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="V_SerialNumber" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Serial Number</MultiLanguageText>
+          </Comment>
+          <Member Name="Text" Datatype="String[64]" />
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>21</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>12</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="V_HardwareRevision" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Hardware Version</MultiLanguageText>
+          </Comment>
+          <Member Name="Text" Datatype="String[64]" />
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>22</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="V_FirmwareRevision" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Firmware Version</MultiLanguageText>
+          </Comment>
+          <Member Name="Text" Datatype="String[64]" />
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>23</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>5</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+      </Member>
+      <Member Name="ApplicationSpecificTag" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">AppliciationSpecificTag</MultiLanguageText>
+        </Comment>
+        <Member Name="V_ApplicationSpecificTa" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">Application Specific Tag</MultiLanguageText>
+          </Comment>
+          <Member Name="Text" Datatype="String[64]" />
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>24</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>16</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+        </Member>
+      </Member>
+      <Member Name="DeviceParameters" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Device Parameters</MultiLanguageText>
+        </Comment>
+        <Member Name="Parameter_01" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">V_DeviceAccessLocks &gt; Device Access Locks</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Struct">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Parameter Value (must be always 4 Byte)</MultiLanguageText>
+            </Comment>
+            <Member Name="V_DeviceAccessLocks" Datatype="Int" />
+            <Member Name="Byte02" Datatype="Byte" />
+            <Member Name="Byte03" Datatype="Byte" />
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>12</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+        </Member>
+        <Member Name="Parameter_02" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">V_DeviceStatus &gt; Device Status</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Struct">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Parameter Value (must be always 4 Byte)</MultiLanguageText>
+            </Comment>
+            <Member Name="V_DeviceStatus" Datatype="Byte" />
+            <Member Name="Byte01" Datatype="Byte" />
+            <Member Name="Byte02" Datatype="Byte" />
+            <Member Name="Byte03" Datatype="Byte" />
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>36</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="Parameter_03" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">FOU2 &gt; FOU2  [OUT 2] behaviour in case of fault</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Struct">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Parameter Value (must be always 4 Byte)</MultiLanguageText>
+            </Comment>
+            <Member Name="FOU2" Datatype="Byte">
+              <StartValue>BYTE#16#04</StartValue>
+            </Member>
+            <Member Name="Byte01" Datatype="Byte" />
+            <Member Name="Byte02" Datatype="Byte" />
+            <Member Name="Byte03" Datatype="Byte" />
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>532</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+        </Member>
+        <Member Name="Parameter_04" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">uni &gt; uni  Selection of unit on the sensor display</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Struct">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Parameter Value (must be always 4 Byte)</MultiLanguageText>
+            </Comment>
+            <Member Name="uni" Datatype="Byte" />
+            <Member Name="Byte01" Datatype="Byte" />
+            <Member Name="Byte02" Datatype="Byte" />
+            <Member Name="Byte03" Datatype="Byte" />
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>551</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+        </Member>
+        <Member Name="Parameter_05" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">ou2 &gt; ou2  Output configuration [OUT 2]</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Struct">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Parameter Value (must be always 4 Byte)</MultiLanguageText>
+            </Comment>
+            <Member Name="ou2" Datatype="Byte">
+              <StartValue>BYTE#16#01</StartValue>
+            </Member>
+            <Member Name="Byte01" Datatype="Byte" />
+            <Member Name="Byte02" Datatype="Byte" />
+            <Member Name="Byte03" Datatype="Byte" />
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>590</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+        </Member>
+        <Member Name="Parameter_06" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">ASP2 &gt; ASP2  Analogue start point 2. [ASP2] must be smaller than [AEP2]. Plea</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Struct">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Parameter Value (must be always 4 Byte)</MultiLanguageText>
+            </Comment>
+            <Member Name="ASP2" Datatype="Int" />
+            <Member Name="Byte02" Datatype="Byte" />
+            <Member Name="Byte03" Datatype="Byte" />
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>630</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+        </Member>
+        <Member Name="Parameter_07" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">AEP2 &gt; AEP2  Analogue end point 2. [AEP2] must be greater than [ASP2]. Please</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Struct">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Parameter Value (must be always 4 Byte)</MultiLanguageText>
+            </Comment>
+            <Member Name="AEP2" Datatype="Int">
+              <StartValue>2000</StartValue>
+            </Member>
+            <Member Name="Byte02" Datatype="Byte" />
+            <Member Name="Byte03" Datatype="Byte" />
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>631</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+        </Member>
+        <Member Name="Parameter_08" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">coF &gt; coF  Zero_point calibration (Calibration offset)</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Struct">
+            <Comment>
+              <MultiLanguageText Lang="en-US">Parameter Value (must be always 4 Byte)</MultiLanguageText>
+            </Comment>
+            <Member Name="coF" Datatype="Int" />
+            <Member Name="Byte02" Datatype="Byte" />
+            <Member Name="Byte03" Datatype="Byte" />
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>5001</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="RelRead" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">reading release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+          <Member Name="RelWrite" Datatype="Bool">
+            <Comment>
+              <MultiLanguageText Lang="en-US">writing release</MultiLanguageText>
+            </Comment>
+            <StartValue>TRUE</StartValue>
+          </Member>
+        </Member>
+      </Member>
+      <Member Name="Commando" Datatype="Struct">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Commandos</MultiLanguageText>
+        </Comment>
+        <Member Name="Commando_00" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">V_SystemCommand = Restore Factory Settings command 130</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Byte">
+            <Comment>
+              <MultiLanguageText Lang="en-US">2</MultiLanguageText>
+            </Comment>
+            <StartValue>BYTE#16#82</StartValue>
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="Commando_01" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">V_SystemCommand = IO_Link 1.1 system test command 240, Event 8DFE appears</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Byte">
+            <Comment>
+              <MultiLanguageText Lang="en-US">2</MultiLanguageText>
+            </Comment>
+            <StartValue>BYTE#16#F0</StartValue>
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="Commando_02" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">V_SystemCommand = IO_Link 1.1 system test command 241, Event 8DFE disappears</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Byte">
+            <Comment>
+              <MultiLanguageText Lang="en-US">2</MultiLanguageText>
+            </Comment>
+            <StartValue>BYTE#16#F1</StartValue>
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="Commando_03" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">V_SystemCommand = IO_Link 1.1 system test command 242, Event 8DFF appears</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Byte">
+            <Comment>
+              <MultiLanguageText Lang="en-US">2</MultiLanguageText>
+            </Comment>
+            <StartValue>BYTE#16#F2</StartValue>
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+        <Member Name="Commando_04" Datatype="Struct">
+          <Comment>
+            <MultiLanguageText Lang="en-US">V_SystemCommand = IO_Link 1.1 system test command 243, Event 8DFF disappears</MultiLanguageText>
+          </Comment>
+          <Member Name="Value" Datatype="Byte">
+            <Comment>
+              <MultiLanguageText Lang="en-US">2</MultiLanguageText>
+            </Comment>
+            <StartValue>BYTE#16#F3</StartValue>
+          </Member>
+          <Member Name="Index" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter index</MultiLanguageText>
+            </Comment>
+            <StartValue>2</StartValue>
+          </Member>
+          <Member Name="Subindex" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter subindex</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="Length" Datatype="Int">
+            <Comment>
+              <MultiLanguageText Lang="en-US">parameter length in BYTE for writing</MultiLanguageText>
+            </Comment>
+            <StartValue>1</StartValue>
+          </Member>
+          <Member Name="BlockStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">function block status</MultiLanguageText>
+            </Comment>
+          </Member>
+          <Member Name="IOLStat" Datatype="DWord">
+            <Comment>
+              <MultiLanguageText Lang="en-US">IO-Link Status</MultiLanguageText>
+            </Comment>
+          </Member>
+        </Member>
+      </Member>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <Name>IF_TA1612</Name>
+      <Namespace />
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text> DEVICEID : 969
+ VENDOR : ifm electronic gmbh
+ DATE: 27.09.2021 
+
+ Comment : Interface TA2502
+</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text> TA1612</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

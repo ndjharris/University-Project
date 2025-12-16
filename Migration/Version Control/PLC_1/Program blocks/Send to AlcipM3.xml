@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="CC1" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Polygon Filler</MultiLanguageText>
+      </Comment>
+      <Member Name="CC_CL_RemWdCnt" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Watchdog Counter</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="CC_CL_Eng_bit" Datatype="Bool" />
+      <Member Name="CC_CL_LyeReq" Datatype="Bool" />
+      <Member Name="CC_CL_AcidReq" Datatype="Bool" />
+      <Member Name="CC_CL_WaterReq" Datatype="Bool" />
+      <Member Name="CC_CL_RinseW_Req" Datatype="Bool" />
+      <Member Name="CC_CL_LyeReturn" Datatype="Bool" />
+      <Member Name="CC_CL_AcidReturn" Datatype="Bool" />
+      <Member Name="CC_CL_RinseW_Return" Datatype="Bool" />
+      <Member Name="CC_CL_ObjNoReturn" Datatype="Bool" />
+      <Member Name="CC_CL_HeatingReq" Datatype="Bool" />
+      <Member Name="CC_CL_ObjEn" Datatype="Bool" />
+      <Member Name="CC_CL_ObjReady" Datatype="Bool" />
+      <Member Name="CC_CL_RinseP_Return" Datatype="Bool" />
+      <Member Name="CC_CL_Start" Datatype="Bool" />
+      <Member Name="CC_CL_ObjWd" Datatype="Bool" />
+      <Member Name="CC_CL_CipTerminated" Datatype="Bool" />
+      <Member Name="CC_CL_spare1" Datatype="Bool" />
+      <Member Name="CC_CL_spare2" Datatype="Bool" />
+      <Member Name="CC_CL_spare3" Datatype="Bool" />
+      <Member Name="CC_CL_spare4" Datatype="Bool" />
+      <Member Name="CC_CL_spare5" Datatype="Bool" />
+      <Member Name="CC_CL_spare6" Datatype="Bool" />
+      <Member Name="CC_CL_spare7" Datatype="Bool" />
+      <Member Name="CC_CL_spare8" Datatype="Bool" />
+      <Member Name="CC_CL_spare9" Datatype="Bool" />
+      <Member Name="CC_CL_spare10" Datatype="Bool" />
+      <Member Name="CC_CL_spare11" Datatype="Bool" />
+      <Member Name="CC_CL_spare12" Datatype="Bool" />
+      <Member Name="CC_CL_spare13" Datatype="Bool" />
+      <Member Name="CC_CL_spare14" Datatype="Bool" />
+      <Member Name="CC_CL_spare15" Datatype="Bool" />
+      <Member Name="CC_CL_spare16" Datatype="Bool" />
+    </Member>
+    <Member Name="hmi" Datatype="Struct" Remanence="Retain">
+      <Member Name="commsFault" Datatype="Bool" />
+      <Member Name="s1" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s3" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s4" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s5" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s7" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s8" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s9" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s10" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s11" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s12" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s13" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s14" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s15" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="_word2" Datatype="Word" Remanence="Retain" />
+    <Member Name="_word3" Datatype="Word" Remanence="Retain" />
+    <Member Name="_word4" Datatype="Word" Remanence="Retain" />
+    <Member Name="_word5" Datatype="Word" Remanence="Retain" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>Send to AlcipM3</Name>
+      <Namespace />
+      <Number>476</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Send Interface to Flex A AlcipM3</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

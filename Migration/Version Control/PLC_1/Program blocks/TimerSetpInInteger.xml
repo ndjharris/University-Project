@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderVersion>0.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="COUNT_DOWN_TIMER_VALUE" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ACTUAL TIMER VALUE COUNT DOWN</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="TIMER_SETP_ACTUAL_TIMER" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TIMER SETPOINT ACTUAL TIMER</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="D_2" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_3" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_4" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_5" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_6" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_7" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_8" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_9" Datatype="Int" Remanence="Retain" />
+    <Member Name="SETPOINT_TIMER_10" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T10</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_11" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T11</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_12" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T12</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_13" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T13</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_14" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T14 STERILE TIME</MultiLanguageText>
+      </Comment>
+      <StartValue>1800</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_15" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T15 COOLING TIME</MultiLanguageText>
+      </Comment>
+      <StartValue>600</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_16" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T16 BLOW OUT CONDENSATE</MultiLanguageText>
+      </Comment>
+      <StartValue>30</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_17" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T17 BLOW OUT AFTER STOP</MultiLanguageText>
+      </Comment>
+      <StartValue>200</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_18" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T18 DELAY OPEN 01.12</MultiLanguageText>
+      </Comment>
+      <StartValue>3</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_19" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T19</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_20" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T20</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_21" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T21</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_22" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T22</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_23" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T23</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_24" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T24</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_25" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T25</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_26" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T26</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_27" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T27 PRERINSE</MultiLanguageText>
+      </Comment>
+      <StartValue>500</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_28" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T28 DOSING LYE</MultiLanguageText>
+      </Comment>
+      <StartValue>150</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_29" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T29 CIRCULATION LYE</MultiLanguageText>
+      </Comment>
+      <StartValue>1800</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_30" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T30 INTERMEDIATE RINSE</MultiLanguageText>
+      </Comment>
+      <StartValue>600</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_31" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T31 DOSING ACID</MultiLanguageText>
+      </Comment>
+      <StartValue>140</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_32" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T32 CIRCULATION ACID</MultiLanguageText>
+      </Comment>
+      <StartValue>1200</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_33" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T33 FINAL RINSE</MultiLanguageText>
+      </Comment>
+      <StartValue>1200</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_34" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T34 BLOW OUT AFTER CIP</MultiLanguageText>
+      </Comment>
+      <StartValue>300</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_35" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T35 DELAY ALARM FILLING PRESSURE</MultiLanguageText>
+      </Comment>
+      <StartValue>5</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_36" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T36 DELAY TT 01.76 BARRIER</MultiLanguageText>
+      </Comment>
+      <StartValue>25</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_37" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T37 DELAY TT 01.78 BARRIER</MultiLanguageText>
+      </Comment>
+      <StartValue>25</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_38" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T38 PAUSE TIME AGITATOR</MultiLanguageText>
+      </Comment>
+      <StartValue>10</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_39" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T39 RUN TIME AGITATOR</MultiLanguageText>
+      </Comment>
+      <StartValue>10</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_40" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T40 DELAY RESET STOP LIGHT</MultiLanguageText>
+      </Comment>
+      <StartValue>4</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_41" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T41 DELAY ALARM STEAM</MultiLanguageText>
+      </Comment>
+      <StartValue>10</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_42" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T42 DELAY ALARM AIR</MultiLanguageText>
+      </Comment>
+      <StartValue>10</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_43" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T43 DELAY ALARM WATER</MultiLanguageText>
+      </Comment>
+      <StartValue>10</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_44" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T44 DELAY BEFORE PURGING</MultiLanguageText>
+      </Comment>
+      <StartValue>300</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_45" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T45 PURGING FILLING LINE</MultiLanguageText>
+      </Comment>
+      <StartValue>25</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_46" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T46 PAUSE 01.13 PRESTE.</MultiLanguageText>
+      </Comment>
+      <StartValue>120</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_47" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T47 OPEN 01.13 PRESTE.</MultiLanguageText>
+      </Comment>
+      <StartValue>1</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_48" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T48 OPEN 01.13 CIP</MultiLanguageText>
+      </Comment>
+      <StartValue>10</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_49" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T49 OPEN 01.18 CIP</MultiLanguageText>
+      </Comment>
+      <StartValue>10</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_50" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T50 OPEN 01.24 CIP</MultiLanguageText>
+      </Comment>
+      <StartValue>5</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_51" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T51 PAUSE BEFORE 01.08 OPEN</MultiLanguageText>
+      </Comment>
+      <StartValue>120</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_52" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T52 FLIP 01.44 AT STOP FILLING</MultiLanguageText>
+      </Comment>
+      <StartValue>5</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_53" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T53 DETERGENT CONC OK</MultiLanguageText>
+      </Comment>
+      <StartValue>15</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_54" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T54 LYE DOSING TOO LONG</MultiLanguageText>
+      </Comment>
+      <StartValue>240</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_55" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T55 ACID DOSING TOO LONG</MultiLanguageText>
+      </Comment>
+      <StartValue>240</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_56" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T56</MultiLanguageText>
+      </Comment>
+      <StartValue>5</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_57" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T57</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="SETPOINT_TIMER_58" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T58</MultiLanguageText>
+      </Comment>
+      <StartValue>120</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_59" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T59</MultiLanguageText>
+      </Comment>
+      <StartValue>5</StartValue>
+    </Member>
+    <Member Name="SETPOINT_TIMER_60" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">SETP.T60</MultiLanguageText>
+      </Comment>
+      <StartValue>3</StartValue>
+    </Member>
+    <Member Name="D_61" Datatype="Int" Remanence="Retain">
+      <StartValue>3</StartValue>
+    </Member>
+    <Member Name="D_62" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_63" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_64" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_65" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_66" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_67" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_68" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_69" Datatype="Int" Remanence="Retain" />
+    <Member Name="D_70" Datatype="Int" Remanence="Retain" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>TimerSetpInInteger</Name>
+      <Namespace />
+      <Number>80</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

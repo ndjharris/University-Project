@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>FLA</HeaderAuthor>
+      <HeaderFamily>UHT</HeaderFamily>
+      <HeaderVersion>1.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="Y0101" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0103" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0104" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0109" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0111" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0112" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0113" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0114" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0115" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="M0139" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0116" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0108" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0117" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0118" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0237" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0238" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0119" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0124" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0135_NOT_USED" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0136_NOT_USED" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0137_NOT_USED" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0143" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0144_NOT_USED" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0147" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0148" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0158" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0545" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="PACK1" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="PACK2" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="PACK3" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="PACK4" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="AlarmLamp" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="AHV_CLOSED" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="AHV_HIGH_LEVEL" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="AHV_READY" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="AHV_SHUT_DOWN" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="AHV_STERILE" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="PROD_AVAILABLE" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="RINSE_READY" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="CAUSTIC_READY" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="ACID_READY" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="CIP_FILLER_ENABLE" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="WATER_PUMP" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0901" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0902" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0903" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="TANK_READY" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="TANK_OPEN" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0904" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0905" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0906" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0907" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0908" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0909" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0910" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0911" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Y0912" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Q41_1" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="CIP_Route" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="SIP_Steam" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Product_Available" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Barrier_Sterile" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="Product_Route" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="X0913" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0930" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0931" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="spare2" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0552" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0934" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0935" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0940" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0941" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0942" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0943" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0944" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0945" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="M0940" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V1021" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V1023" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V1024" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V1025" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V1027" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V1083" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="M0941" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+    <Member Name="V0936" Datatype="&quot;ItemTimer_UDT&quot;" Remanence="Retain" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>ItemTimerwork</Name>
+      <Namespace />
+      <Number>13</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

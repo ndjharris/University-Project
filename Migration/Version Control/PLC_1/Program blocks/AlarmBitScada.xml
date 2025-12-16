@@ -1,0 +1,596 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>FLA</HeaderAuthor>
+      <HeaderFamily>UHT</HeaderFamily>
+      <HeaderVersion>1.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="A01_TankInProcess" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A02_TankNotClean" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A03_NoInstrumentAir" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A04_NoSteam" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A05_DrainIsActive" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A06_CipFillerStarted" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A07_CipUnitOccupied" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A08_NotReadyForCip" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A09_NoProcessActive" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A10_AllreadyInStopPhase" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A11_TankIsBeingFilled" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A12_NotReadyForTotalStop" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A13_DrainTankNotAllowed" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A14_CipOnTankStared" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A15_ChainWashSelected" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A16_NoCipProgramSelected" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A17_ContinueDosingSelect" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A18" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A19" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A20" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A21" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A22" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A23" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A24" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A25" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A26" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A27" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A28" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A29" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A30" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A31" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A32" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PushButtonAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A33_TT0176TooLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A34_TT0160TooLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A35_TT0163TooLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A36_TT0178TooLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A37_TT0176Low" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A38_TT0178Low" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A39_TankReadyforProd" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A40_LyedosingTooLong" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A41_AcidDosingTooLong" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A42_DrainTheTank" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A43_WaitingForCipUnit" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A44_FillPressureTooLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A45_FillingPressureLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A46_LyeContainerEmpty" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A47_AcidContainerEmpty" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A48_TankEmpty" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A49_TankFull" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A50_SiemensBatteryLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A51_NoWater" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A52_ProdAtFillingMash" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A53_FillerNotReadyForCip" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A54_NoInstrumentAir" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A55_NoSteam" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A56" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A57_TT0951TooLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A58_TT0951Low" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A59_TT0950TooLow" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A60_TT0950Low" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A61_Hamba_Valve_Fault" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A62_Hamba_Barrier_low" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A63_Stop_CIP_PB_Operated" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A64_TT0178_High" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Condensate temperature High</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A65_TT0930_Low" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT0930 Low Production</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A66_TT0930_Low_SIP" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT0930 Low SIP</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A67_TT0931_Low" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT0931 Low Production</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="A68_CT0930_High" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">CT0930 High Conductivity - suspect V01.01 Seals</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx8_4_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx8_5_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx8_6_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx8_7_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx9_0_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx9_1_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx9_2_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx9_3_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx9_4_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx9_5_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx9_6_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx9_7_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx10_0_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx10_1_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx10_2_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx10_3_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx10_4_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx10_5_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx10_6_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx10_7_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx11_0_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx11_1_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx11_2_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx11_3_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx11_4_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx11_5_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx11_6_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="dx11_7_Spare" Datatype="Bool" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">ProcessAlarm</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>AlarmBitScada</Name>
+      <Namespace />
+      <Number>25</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

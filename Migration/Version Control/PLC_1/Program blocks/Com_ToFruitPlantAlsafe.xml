@@ -1,0 +1,308 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="AFM1" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Signals From Ampack</MultiLanguageText>
+      </Comment>
+      <Member Name="Ready" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Ready for production</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Prod_Fruit_Req" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Request Fruit product</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Filler1_ProductPumpReq" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Product Pump Request</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Ready_For_CIP" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Ready for CIP - Not Used</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="GS22_61" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">APV AHV- FP1 - Route to Polygon Filler - Flow Bend Connected</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="GS22_62" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">APV AHV- FP1 - Route to Polygon Filler - Blank Fitted</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="CIP_Prod_Clusters" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Information - Product clusters cleaning - Use to interlock sterilisation</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="PG_TransferLine_Clean" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Gemini HMI indication</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="PG_TransferLine_Sterile" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Gemini HMI indication</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SpareBool_1_1" Datatype="Bool" />
+      <Member Name="SpareBool_1_2" Datatype="Bool" />
+      <Member Name="SteamBarrierActv_PD_CL2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Steam barrier activated pre doser product cluster 2 - Fruit</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SpareBool_1_4" Datatype="Bool" />
+      <Member Name="SpareBool_1_5" Datatype="Bool" />
+      <Member Name="SpareBool_1_6" Datatype="Bool" />
+      <Member Name="SpareBool_1_7" Datatype="Bool" />
+      <Member Name="SpareBool_2_0" Datatype="Bool" />
+      <Member Name="SpareBool_2_1" Datatype="Bool" />
+      <Member Name="SpareBool_2_2" Datatype="Bool" />
+      <Member Name="SpareBool_2_3" Datatype="Bool" />
+      <Member Name="SpareBool_2_4" Datatype="Bool" />
+      <Member Name="SpareBool_2_5" Datatype="Bool" />
+      <Member Name="SpareBool_2_6" Datatype="Bool" />
+      <Member Name="SpareBool_2_7" Datatype="Bool" />
+      <Member Name="SpareBool_3_0" Datatype="Bool" />
+      <Member Name="SpareBool_3_1" Datatype="Bool" />
+      <Member Name="SpareBool_3_2" Datatype="Bool" />
+      <Member Name="SpareBool_3_3" Datatype="Bool" />
+      <Member Name="SpareBool_3_4" Datatype="Bool" />
+      <Member Name="SpareBool_3_5" Datatype="Bool" />
+      <Member Name="SpareBool_3_6" Datatype="Bool" />
+      <Member Name="SpareBool_3_7" Datatype="Bool" />
+      <Member Name="SpareBool_4_0" Datatype="Bool" />
+      <Member Name="SpareBool_4_1" Datatype="Bool" />
+      <Member Name="SpareBool_4_2" Datatype="Bool" />
+      <Member Name="SpareBool_4_3" Datatype="Bool" />
+      <Member Name="SpareBool_4_4" Datatype="Bool" />
+      <Member Name="SpareBool_4_5" Datatype="Bool" />
+      <Member Name="SpareBool_4_6" Datatype="Bool" />
+      <Member Name="SpareBool_4_7" Datatype="Bool" />
+      <Member Name="Nom_FillgLev_PD" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Not used</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Nom_FillgLev_MD1" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Not used</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Nom_FillgLev_MD2" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Not used</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Actl_FillgLev_PD" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Not used</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Actl_FillgLev_MD1" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Not used</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Actl_FillgLev_MD2" Datatype="Int">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Not used</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="REM_WD_CNT" Datatype="Int" />
+    </Member>
+    <Member Name="hmi" Datatype="Struct" Remanence="Retain">
+      <Member Name="commsFault" Datatype="Bool" />
+      <Member Name="s1" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s2" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s3" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s4" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s5" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s6" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s7" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s8" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s9" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s10" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s11" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s12" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s13" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s14" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="s15" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">spare</MultiLanguageText>
+        </Comment>
+      </Member>
+    </Member>
+    <Member Name="Spare" Datatype="Array[0..36] of Byte" Remanence="Retain" />
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>Com_ToFruitPlantAlsafe</Name>
+      <Namespace />
+      <Number>305</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

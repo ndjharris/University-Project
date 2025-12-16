@@ -1,0 +1,21 @@
+﻿FUNCTION "Block_1" : Void
+TITLE = ItemInAutoCheck
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : NDJH
+VERSION : 0.1
+   VAR_OUTPUT 
+      ManualItemCount : Int;
+   END_VAR
+
+   VAR_IN_OUT 
+      itemsArray : Array[*] of "ItemInfo_UDT";
+   END_VAR
+
+   VAR_TEMP 
+      index : Bool;
+   END_VAR
+
+
+BEGIN
+END_FUNCTION
+

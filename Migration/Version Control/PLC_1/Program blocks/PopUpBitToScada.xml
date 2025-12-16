@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>FLA</HeaderAuthor>
+      <HeaderFamily>UHT</HeaderFamily>
+      <HeaderVersion>1.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="PC_number_from_intouch" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PC number from intouch - Range 1 to 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Count_down_to_reset" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Count down to reset text number to pc x</MultiLanguageText>
+      </Comment>
+      <StartValue>-1</StartValue>
+    </Member>
+    <Member Name="Pop_up_text_to_PC1" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pop up text number to intouch PC 1</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Pop_up_text_to_PC2" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pop up text number to intouch PC 2</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Pop_up_text_to_PC3" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pop up text number to intouch PC 3</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Pop_up_text_to_PC4" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pop up text number to intouch PC 4</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Pop_up_text_to_PC5" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pop up text number to intouch PC 5</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Pop_up_text_to_PC6" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pop up text number to intouch PC 6</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Pop_up_text_to_PC7" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pop up text number to intouch PC 7</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Pop_up_text_to_PC8" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Pop up text number to intouch PC 8</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="Pop_up_text_to_PC9" Datatype="Int" Remanence="Retain" />
+    <Member Name="Monitor_comm_from_intouc" Datatype="Int" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Counter - Monitor comm. from intouch</MultiLanguageText>
+      </Comment>
+      <StartValue>-7535</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>PopUpBitToScada</Name>
+      <Namespace />
+      <Number>36</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

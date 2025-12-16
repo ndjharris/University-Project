@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>FLA</HeaderAuthor>
+      <HeaderFamily>UHT</HeaderFamily>
+      <HeaderVersion>1.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="A" Datatype="Array[1..96] of Bool">
+      <Subelement Path="1">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A01_TankInProcess</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="2">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A02_TankNotClean</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="3">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A03_NoInstrumentAir</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="4">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A04_NoSteam</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="5">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A05_DrainIsActive</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="6">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A06_CipFillerStarted</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="7">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A07_CipUnitOccupied</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="8">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A08_NotReadyForCip</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="9">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A09_NoProcessActive</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="10">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A10_AllreadyInStopPhase</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="11">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A11_TankIsBeingFilled</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="12">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A12_NotReadyForTotalStop</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="13">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A13_DrainTankNotAllowed</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="14">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A14_CipOnTankStared</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="15">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A15_ChainWashSelected</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="16">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A16_NoCipProgramSelected</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="17">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A17_ContinueDosingSelect</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="18">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A18</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="19">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A19</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="20">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A20</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="21">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A21</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="22">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A22</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="23">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A23</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="24">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A24</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="25">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A25</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="26">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A26</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="27">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A27</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="28">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A28</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="29">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A29</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="30">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A30</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="31">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A31</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="32">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A32</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="33">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A33_TT0176TooLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="34">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A34_TT0160TooLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="35">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A35_TT0163TooLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="36">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A36_TT0178TooLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="37">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A37_TT0176Low</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="38">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A38_TT0178Low</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="39">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A39_TankReadyforProd</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="40">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A40_LyedosingTooLong</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="41">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A41_AcidDosingTooLong</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="42">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A42_DrainTheTank</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="43">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A43_WaitingForCipUnit</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="44">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A44_FillPressureTooLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="45">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A45_FillingPressureLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="46">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A46_LyeContainerEmpty</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="47">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A47_AcidContainerEmpty</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="48">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A48_TankEmpty</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="49">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A49_TankFull</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="50">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A50_SiemensBatteryLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="51">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A51_NoWater</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="52">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A52_ProdAtFillingMash</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="53">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A53_FillerNotReadyForCip</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="54">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A54_NoInstrumentAir</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="55">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A55_NoSteam</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="56">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A56</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="57">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A57_TT0951TooLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="58">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A58_TT0951Low</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="59">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A59_TT0950TooLow</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="60">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A60_TT0950Low</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="61">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A61_Hamba_Valve_Fault</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="62">
+        <Comment>
+          <MultiLanguageText Lang="en-US">A62_Hamba_Barrier_low</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="63">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx7_6_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="64">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx7_7_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="65">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx8_0_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="66">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx8_1_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="67">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx8_2_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="68">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx8_3_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="69">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx8_4_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="70">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx8_5_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="71">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx8_6_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="72">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx8_7_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="73">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx9_0_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="74">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx9_1_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="75">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx9_2_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="76">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx9_3_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="77">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx9_4_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="78">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx9_5_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="79">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx9_6_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="80">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx9_7_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="81">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx10_0_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="82">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx10_1_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="83">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx10_2_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="84">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx10_3_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="85">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx10_4_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="86">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx10_5_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="87">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx10_6_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="88">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx10_7_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="89">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx11_0_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="90">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx11_1_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="91">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx11_2_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="92">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx11_3_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="93">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx11_4_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="94">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx11_5_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="95">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx11_6_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+      <Subelement Path="96">
+        <Comment>
+          <MultiLanguageText Lang="en-US">dx11_7_Spare</MultiLanguageText>
+        </Comment>
+      </Subelement>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>AckProcessAndPbAlarms</Name>
+      <Namespace />
+      <Number>3</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

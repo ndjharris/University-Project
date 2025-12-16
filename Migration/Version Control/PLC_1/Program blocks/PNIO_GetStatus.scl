@@ -1,0 +1,41 @@
+﻿FUNCTION "PNIO_GetStatus" : Void
+TITLE = Get status from PNIO Diagnostic Data
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : NDJH
+VERSION : 0.1
+   VAR_OUTPUT 
+      hasComponentError : Bool;
+      hasSubComponentError : Bool;
+      hasComponentMaintenanceReq : Bool;
+      hasComponentMaintenanceDem : Bool;
+      hasSubComponentMaintenanceReq : Bool;
+      hasSubComponentMaintenanceDem : Bool;
+      componentStatusGood : Bool;
+      subComponentStatusGood : Bool;
+   END_VAR
+
+   VAR_IN_OUT 
+      diagnosticData : "DiagnosticUDT";
+   END_VAR
+
+
+BEGIN
+	REGION Get_Status
+	    #hasComponentError := #diagnosticData.ComponentDiag.ComponentStateDetail.%X6;
+	    
+	    #hasSubComponentError := #diagnosticData.SubComponentDiag.SubordinateState.%X4;
+	    
+	    #hasComponentMaintenanceReq := #diagnosticData.ComponentDiag.ComponentStateDetail.%X4;
+	    
+	    #hasComponentMaintenanceDem := #diagnosticData.ComponentDiag.ComponentStateDetail.%X5;
+	    
+	    #hasSubComponentMaintenanceReq := #diagnosticData.SubComponentDiag.SubordinateIOState.%X2;
+	    
+	    #hasSubComponentMaintenanceDem := #diagnosticData.SubComponentDiag.SubordinateIOState.%X3;
+	    
+	    #componentStatusGood := #diagnosticData.ComponentDiag.OwnState = 0;
+	    
+	    #subComponentStatusGood := #diagnosticData.SubComponentDiag.SubordinateState = 0;
+	END_REGION
+END_FUNCTION
+

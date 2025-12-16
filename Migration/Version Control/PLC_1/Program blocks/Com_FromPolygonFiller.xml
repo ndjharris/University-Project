@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="CIP" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">CIP Signals From Hassia</MultiLanguageText>
+      </Comment>
+      <Member Name="LifeBit" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Watchdog bit</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="RequestCIPLye" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Request Lye Only CIP</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="RequestCIPLyeAcid" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Request Lye + Acid CIP</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="SpareBool_0_3" Datatype="Bool" />
+      <Member Name="SpareBool_0_4" Datatype="Bool" />
+      <Member Name="SpareBool_0_5" Datatype="Bool" />
+      <Member Name="SpareBool_0_6" Datatype="Bool" />
+      <Member Name="SpareBool_0_7" Datatype="Bool" />
+      <Member Name="CIPRunning" Datatype="Bool" />
+      <Member Name="NoTimeStop" Datatype="Bool" />
+      <Member Name="ReleaseCIPFeedPump" Datatype="Bool" />
+      <Member Name="CipReturnPumpRunning" Datatype="Bool" />
+      <Member Name="RequestPreRinse_1" Datatype="Bool" />
+      <Member Name="DrainMachine" Datatype="Bool" />
+      <Member Name="RequestPreRinse_2" Datatype="Bool" />
+      <Member Name="RequestCaustic" Datatype="Bool" />
+      <Member Name="RequestCausticRinse" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Request Clear Rinse After Caustic</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="RequestAcid" Datatype="Bool" />
+      <Member Name="RequestAcidRinse" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Request Clear Rinse After Acid</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="MachineCleaned" Datatype="Bool" />
+      <Member Name="SpareBool_2_4" Datatype="Bool" />
+      <Member Name="SpareBool_2_5" Datatype="Bool" />
+      <Member Name="SpareBool_2_6" Datatype="Bool" />
+      <Member Name="SpareBool_2_7" Datatype="Bool" />
+      <Member Name="SpareBool_3_0" Datatype="Bool" />
+      <Member Name="SpareBool_3_1" Datatype="Bool" />
+      <Member Name="SpareBool_3_2" Datatype="Bool" />
+      <Member Name="SpareBool_3_3" Datatype="Bool" />
+      <Member Name="SpareBool_3_4" Datatype="Bool" />
+      <Member Name="SpareBool_3_5" Datatype="Bool" />
+      <Member Name="SpareBool_3_6" Datatype="Bool" />
+      <Member Name="SpareBool_3_7" Datatype="Bool" />
+      <Member Name="Spacer" Datatype="Array[0..11] of Word" />
+    </Member>
+    <Member Name="SIP" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Sterilisation Signals from Hassia</MultiLanguageText>
+      </Comment>
+      <Member Name="Request" Datatype="Bool" />
+      <Member Name="Running" Datatype="Bool" />
+      <Member Name="Sterile" Datatype="Bool">
+        <Comment>
+          <MultiLanguageText Lang="en-US">Machine Sterile</MultiLanguageText>
+        </Comment>
+      </Member>
+      <Member Name="Spacer" Datatype="Array[0..12] of Word" />
+    </Member>
+    <Member Name="Production" Datatype="Struct" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Production Signals from Hassia</MultiLanguageText>
+      </Comment>
+      <Member Name="RequestFiller1" Datatype="Bool" />
+      <Member Name="StartProductPumpFiller1" Datatype="Bool" />
+      <Member Name="RequestFiller2" Datatype="Bool" />
+      <Member Name="StartProductPumpFiller2" Datatype="Bool" />
+      <Member Name="HopperLevelFiller1" Datatype="Int" />
+      <Member Name="HopperLevelFiller2" Datatype="Int" />
+      <Member Name="Spacer" Datatype="Array[0..10] of Word" />
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>Com_FromPolygonFiller</Name>
+      <Namespace />
+      <Number>471</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

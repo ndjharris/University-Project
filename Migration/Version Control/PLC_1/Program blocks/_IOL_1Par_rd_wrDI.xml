@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.InstanceDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>fur</HeaderAuthor>
+      <HeaderFamily>IOL</HeaderFamily>
+      <HeaderVersion>0.0</HeaderVersion>
+      <InstanceOfName>_IOL_1Par_rd_wr</InstanceOfName>
+      <InstanceOfType>FB</InstanceOfType>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="IA_Interface" Datatype="Any" />
+    <Member Name="IHW_hwID" Datatype="HW_ANY" />
+    <Member Name="II_CAP" Datatype="Int" />
+    <Member Name="II_PORT" Datatype="Int" />
+    <Member Name="I_DataStorage" Datatype="Bool" />
+    <Member Name="I_BlockParam" Datatype="Bool" />
+    <Member Name="IOL_INDEX" Datatype="Int" />
+    <Member Name="IOL_SUBINDEX" Datatype="Int" />
+    <Member Name="LEN" Datatype="Int" />
+  </Section>
+  <Section Name="Output">
+    <Member Name="O_ComActiv" Datatype="Bool" />
+    <Member Name="O_Fault" Datatype="Bool" />
+  </Section>
+  <Section Name="InOut">
+    <Member Name="IO_ReadReq" Datatype="Bool" />
+    <Member Name="IO_WriteReq" Datatype="Bool" />
+    <Member Name="IO_ResetReg" Datatype="Bool" />
+  </Section>
+  <Section Name="Static">
+    <Member Name="LIOLink_Call" Datatype="&quot;LIOLink_Device&quot;" />
+    <Member Name="DelCOMAct" Datatype="TOF_TIME" Version="1.0" />
+    <Member Name="SST_RecordData" Datatype="Array[0..231] of Byte" />
+    <Member Name="STAT1" Datatype="Bool" />
+    <Member Name="Offset" Datatype="DWord" />
+    <Member Name="S_NumberParameter" Datatype="Int" />
+    <Member Name="S_NumberParameterSeq" Datatype="Int" />
+    <Member Name="SI_StepAct" Datatype="Int" />
+    <Member Name="SI_StepActSave" Datatype="Int" />
+    <Member Name="SI_IOL_Index" Datatype="Int" />
+    <Member Name="SI_IOL_Subindex" Datatype="Int" />
+    <Member Name="SI_Len" Datatype="Int" />
+    <Member Name="S_WordT" Datatype="Word" />
+    <Member Name="S_StartParamDownload" Datatype="Int" />
+    <Member Name="S_StartDeviceIdent" Datatype="Int" />
+    <Member Name="S_StartAppSpezTag" Datatype="Int" />
+    <Member Name="S_StartDeviceParam" Datatype="Int" />
+    <Member Name="S_StartCommando" Datatype="Int" />
+    <Member Name="S_NumberCommandos" Datatype="Int" />
+    <Member Name="S_NumberComAct" Datatype="Int" />
+    <Member Name="S_ByteT" Datatype="Byte" />
+    <Member Name="IOL_Call_Busy" Datatype="Bool" />
+    <Member Name="IOL_Call_Done_Valid" Datatype="Bool" />
+    <Member Name="IOL_Call_Error" Datatype="Bool" />
+    <Member Name="S_SeqActive" Datatype="Bool" />
+    <Member Name="S_WriteActive" Datatype="Bool" />
+    <Member Name="S_ReadActive" Datatype="Bool" />
+    <Member Name="S_ComSeq" Datatype="Bool" />
+    <Member Name="S_NoCom" Datatype="Bool" />
+    <Member Name="S_FP_1" Datatype="Bool" />
+    <Member Name="S_RelRead" Datatype="Bool" />
+    <Member Name="S_RelWrite" Datatype="Bool" />
+    <Member Name="S_StartWrite" Datatype="Bool" />
+    <Member Name="S_ReqDataStorBreak" Datatype="Bool" />
+    <Member Name="S_ReqWriteCom" Datatype="Bool" />
+  </Section>
+</Sections></Interface>
+      <Name>_IOL_1Par_rd_wrDI</Name>
+      <Namespace />
+      <Number>116</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.InstanceDB>
+</Document>

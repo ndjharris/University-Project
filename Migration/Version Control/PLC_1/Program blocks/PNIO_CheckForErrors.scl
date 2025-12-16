@@ -1,0 +1,99 @@
+﻿FUNCTION_BLOCK "PNIO_CheckForErrors"
+TITLE = PNIO_CheckForErrors
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_IN_OUT 
+      diagnosticData : "DiagnosticUDT";
+      historicalDiagnosticData : "DiagnosticUDT";
+      faultID { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      faultCount : Int;
+      faultTime : DInt;
+   END_VAR
+
+   VAR 
+      TimeCounter {InstructionName := 'CTU_DINT'; LibVersion := '1.0'; S7_SetPoint := 'False'} : CTU_DINT;
+   END_VAR
+   VAR RETAIN
+      addErrorCount { S7_SetPoint := 'True'} : Bool;
+   END_VAR
+
+   VAR_TEMP 
+      hasComponentError : Bool;
+      hasSubComponentError : Bool;
+      hasComponentMaintenanceReq : Bool;
+      hasComponentMaintenanceDem : Bool;
+      hasSubComponentMaintenanceReq : Bool;
+      hasSubComponentMaintenanceDem : Bool;
+      componentStatusGood : Bool;
+      subComponentStatusGood : Bool;
+      isHistorical : Bool;
+      tempFaultID : Int;
+   END_VAR
+
+
+BEGIN
+	REGION Read Hardware
+	    #diagnosticData.RetVal := GET_DIAG(MODE := 1, LADDR := #diagnosticData.hwID, CNT_DIAG => #diagnosticData.Count_Diag, DIAG := #diagnosticData.ComponentDiag);
+	    #diagnosticData.RetVal := GET_DIAG(MODE := 2, LADDR := #diagnosticData.hwID, CNT_DIAG => #diagnosticData.Count_Diag, DIAG := #diagnosticData.SubComponentDiag);
+	END_REGION
+	REGION Store #faultID
+	    #tempFaultID := #faultID;
+	END_REGION
+	REGION Get Status
+	    "PNIO_GetStatus"(hasComponentError => #hasComponentError,
+	                     hasSubComponentError => #hasSubComponentError,
+	                     hasComponentMaintenanceReq => #hasComponentMaintenanceReq,
+	                     hasComponentMaintenanceDem => #hasComponentMaintenanceDem,
+	                     hasSubComponentMaintenanceReq => #hasSubComponentMaintenanceReq,
+	                     hasSubComponentMaintenanceDem => #hasSubComponentMaintenanceDem,
+	                     componentStatusGood => #componentStatusGood,
+	                     subComponentStatusGood => #subComponentStatusGood,
+	                     diagnosticData := #diagnosticData);
+	END_REGION
+	
+	REGION Historise data if no fault
+	    IF #hasComponentError OR #hasSubComponentError OR #hasComponentMaintenanceDem OR #hasComponentMaintenanceReq OR #hasSubComponentMaintenanceDem OR #hasSubComponentMaintenanceReq THEN
+	        IF #historicalDiagnosticData = #diagnosticData THEN
+	            IF NOT #addErrorCount THEN
+	                #faultCount := #faultCount + 1;
+	            END_IF;
+	            #addErrorCount := true;
+	        ELSE
+	            #faultCount := 0;
+	        END_IF;
+	        #historicalDiagnosticData := #diagnosticData;
+	        #isHistorical := false;
+	    ELSE
+	        "PNIO_GetStatus"(hasComponentError => #hasComponentError,
+	                         hasSubComponentError => #hasSubComponentError,
+	                         hasComponentMaintenanceReq => #hasComponentMaintenanceReq,
+	                         hasComponentMaintenanceDem => #hasComponentMaintenanceDem,
+	                         hasSubComponentMaintenanceReq => #hasSubComponentMaintenanceReq,
+	                         hasSubComponentMaintenanceDem => #hasSubComponentMaintenanceDem,
+	                         componentStatusGood => #componentStatusGood,
+	                         subComponentStatusGood => #subComponentStatusGood,
+	                         diagnosticData := #historicalDiagnosticData);
+	        #addErrorCount := false;
+	        #isHistorical := true;
+	    END_IF;
+	END_REGION
+	
+	REGION Convert to integer value
+	    #faultID.%X0 := #isHistorical;
+	    #faultID.%X1 := #hasComponentError;
+	    #faultID.%X2 := #hasComponentMaintenanceReq;
+	    #faultID.%X3 := #hasComponentMaintenanceDem;
+	    #faultID.%X4 := #hasSubComponentError;
+	    #faultID.%X5 := #hasSubComponentMaintenanceReq;
+	    #faultID.%X6 := #hasSubComponentMaintenanceDem;
+	END_REGION
+	
+	REGION Fault timer count
+	    #TimeCounter(CU := "1HZ",
+	                 R := #tempFaultID <> #faultID,
+	                 PV := #TimeCounter.PV,
+	                 Q => #TimeCounter.QD,
+	                 CV => #faultTime);
+	END_REGION
+END_FUNCTION_BLOCK
+

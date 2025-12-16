@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <HeaderAuthor>OPA_8160</HeaderAuthor>
+      <HeaderFamily>ANALOG</HeaderFamily>
+      <HeaderName>ANA_INPU</HeaderName>
+      <HeaderVersion>0.0</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="TT0176REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT 01.76</MultiLanguageText>
+      </Comment>
+      <StartValue>124.8148</StartValue>
+    </Member>
+    <Member Name="TT0178REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT 01.78</MultiLanguageText>
+      </Comment>
+      <StartValue>127.5</StartValue>
+    </Member>
+    <Member Name="TT0160REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT 01.60</MultiLanguageText>
+      </Comment>
+      <StartValue>63.05556</StartValue>
+    </Member>
+    <Member Name="TT0172REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT 01.72</MultiLanguageText>
+      </Comment>
+      <StartValue>26.66667</StartValue>
+    </Member>
+    <Member Name="TT0163REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT 01.63</MultiLanguageText>
+      </Comment>
+      <StartValue>130.0</StartValue>
+    </Member>
+    <Member Name="PT0167REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">PT 01.67</MultiLanguageText>
+      </Comment>
+      <StartValue>2.480903</StartValue>
+    </Member>
+    <Member Name="WT0169REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">WT 01.69</MultiLanguageText>
+      </Comment>
+      <StartValue>99.82639</StartValue>
+    </Member>
+    <Member Name="TT0180REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT 01.80</MultiLanguageText>
+      </Comment>
+      <StartValue>21.94444</StartValue>
+    </Member>
+    <Member Name="CT0182REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">CT 01.82</MultiLanguageText>
+      </Comment>
+      <StartValue>-0.1446759</StartValue>
+    </Member>
+    <Member Name="TT0950REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT 09.50</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+    <Member Name="TT0951REAL" Datatype="Real" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">TT 09.51</MultiLanguageText>
+      </Comment>
+      <StartValue>0.0</StartValue>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>MeasuredValues</Name>
+      <Namespace />
+      <Number>110</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="ACT" Datatype="&quot;_IOL_VMrdParInterface&quot;" Remanence="Retain">
+      <Sections>
+        <Section Name="None">
+          <Member Name="dataStore" Datatype="Struct">
+            <Member Name="dbno" Datatype="Int">
+              <StartValue>500</StartValue>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+    <Member Name="acInt" Datatype="Array[0..31] of &quot;_IOL_VMrdParInterface&quot;" Remanence="Retain">
+      <Comment>
+        <MultiLanguageText Lang="en-US">Process Object pointers</MultiLanguageText>
+      </Comment>
+      <Sections>
+        <Section Name="None">
+          <Member Name="ia" Datatype="Struct">
+            <Member Name="dbno" Datatype="Int">
+              <Subelement Path="3">
+                <StartValue>501</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>501</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>502</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>502</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>502</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>503</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>503</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>503</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>503</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>503</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>504</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>504</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>502</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>504</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>504</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>504</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>504</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="al" Datatype="Int">
+              <Subelement Path="3">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>144</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>144</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>144</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>144</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>124</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>124</StartValue>
+              </Subelement>
+            </Member>
+          </Member>
+          <Member Name="dataStore" Datatype="Struct">
+            <Member Name="dbno" Datatype="Int">
+              <Subelement Path="0">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="3">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>500</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>500</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="sta" Datatype="Int">
+              <Subelement Path="4">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>80</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>120</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>160</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>200</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>240</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>280</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>320</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>360</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>440</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>480</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>520</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>560</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>600</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>640</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>40</StartValue>
+              </Subelement>
+            </Member>
+            <Member Name="al" Datatype="Int">
+              <Subelement Path="3">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="4">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="5">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="6">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="7">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="8">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="9">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="10">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="11">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="12">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="17">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="18">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="19">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="20">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="21">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="22">
+                <StartValue>40</StartValue>
+              </Subelement>
+              <Subelement Path="25">
+                <StartValue>680</StartValue>
+              </Subelement>
+            </Member>
+          </Member>
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>_IOL_VMrd_PointerInfo</Name>
+      <Namespace />
+      <Number>23</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="9" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Info to construct pointer to Valve Monitoring Read parameters</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="B" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="C" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="D" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="E" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="F" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="10" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

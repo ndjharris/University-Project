@@ -1,0 +1,4833 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V19" />
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>false</AutoNumber>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="IN_EN" Datatype="Bool" />
+    <Member Name="IN_DE" Datatype="Bool" />
+    <Member Name="IN_ACT" Datatype="Bool" />
+    <Member Name="ControlWord" Datatype="Word" />
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="Info" Datatype="&quot;ValvesInfo_UDT&quot;" />
+  </Section>
+  <Section Name="Static">
+    <Member Name="ActMem" Datatype="Bool" />
+    <Member Name="DeActMem" Datatype="Bool" />
+    <Member Name="ActDur" Datatype="Bool" />
+    <Member Name="DeActDur" Datatype="Bool" />
+    <Member Name="ActClearDurCount" Datatype="Bool" />
+    <Member Name="DeActClearDurCount" Datatype="Bool" />
+    <Member Name="FP_A" Datatype="Bool" />
+    <Member Name="FP_D" Datatype="Bool" />
+    <Member Name="FP_A_Pulse" Datatype="Bool" />
+    <Member Name="FP_D_Pulse" Datatype="Bool" />
+    <Member Name="SumAverage" Datatype="DInt" />
+    <Member Name="CountAverage" Datatype="Int" />
+    <Member Name="data" Datatype="&quot;ValveMonitor_UDT&quot;" />
+  </Section>
+  <Section Name="Temp">
+    <Member Name="EN_In_Use" Datatype="Bool" />
+    <Member Name="DE_In_Use" Datatype="Bool" />
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>ValveMonitor</Name>
+      <Namespace />
+      <Number>2</Number>
+      <ProgrammingLanguage>STL</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Valve Monitor monitors single acting valves with Energiseed only or 
+De-energised 
+only or both Feedback states. Selection of feedback states in use can be 
+selected with Bits 0 and 1 of the "ControlWord" Input.
+
+
+Control Word
+Bit 0 = IN_DE in use
+Bit 1 = IN_EN in use
+
+
+Valve Monitor should be called within a Timed Interrupt OB and the duration 
+counters should be multiplied by the Timed Interrupt Cycle time to get the 
+durations in Seconds.
+
+Note: If Activation State changes before destination FeedBack is reached then 
+the Duration count is not moved to the Archive and therefore does not affect 
+the 
+average duration. (De)Activations Count(s) will be incremented
+</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="3" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="5" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="6" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="7" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="8" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="9" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="22">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ControlWord" SliceAccessModifier="x0" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="23">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="EN_In_Use" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="29">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ControlWord" SliceAccessModifier="x1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="24">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DE_In_Use" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="27">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="10" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="12" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="13" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="15" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="17" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="18" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="28">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="Info" />
+        <Component Name="RESET" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="30">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="RST" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="32">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="34">
+    <LineComment>
+      <Text> Act</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="36">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="ActivationCounter" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="38">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="40">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="42">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="44">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="46">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="48">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="50">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="52">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="54">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="56">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="58">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="60">
+    <LineComment>
+      <Text> De_Act</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="62">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="De_ActivationCounter" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="64">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="66">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="68">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="70">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="72">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="74">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="76">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="78">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="80">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="82">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="84">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="86">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="Info" />
+        <Component Name="RESET" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="88">
+    <LabelDeclaration>
+      <Label Name="RST" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="90">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="1F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="21" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="22" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="23" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="24" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>RESET ALL Info</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="26" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="27" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="29" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="91">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_ACT" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="93">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_EN" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="95">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="97">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="99">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="101">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="102">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="104">
+    <StlToken Text="Rise" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="FP_A" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="106">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="FP_A_Pulse" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="108">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="ACTC" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="110">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="ActivationCounter" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="112">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="114">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="115">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="ActivationCounter" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="117">
+    <LabelDeclaration>
+      <Label Name="ACTC" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="119">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="30" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="31" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="32" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="33" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="34" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="35" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Activation Counter</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="36" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="38" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="120">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_ACT" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="122">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_DE" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="124">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="126">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="128">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="130">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="131">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActMem" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="133">
+    <StlToken Text="Rise" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="FP_D" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="135">
+    <StlToken Text="Assign" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="FP_D_Pulse" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="137">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="DACC" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="139">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="De_ActivationCounter" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="141">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="143">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="144">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="De_ActivationCounter" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="146">
+    <LabelDeclaration>
+      <Label Name="DACC" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="148">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="149">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="3F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="40" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="42" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="43" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="44" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="45" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>De-Activation Counter</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="47" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="49" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="4C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="4D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="150">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="EN_In_Use" />
+      </Symbol>
+      <LineComment>
+        <Text> IN_EN in Use</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="153">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="ENDA" />
+      <LineComment>
+        <Text> Jump to ENDA if False</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="156">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="FP_A_Pulse" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="158">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_EN" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="160">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="162">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="163">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="165">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_EN" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="167">
+    <StlToken Text="ON" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_ACT" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="169">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="171">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActClearDurCount" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="173">
+    <LineComment>
+      <Text> Move Duration Count to Archive.n1</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="175">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="177">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_ACT" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="179">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="MOV" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="181">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="183">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="185">
+    <LabelDeclaration>
+      <Label Name="MOV" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="187">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="188">
+    <LineComment>
+      <Text>Clear Counter</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="190">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="192">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActClearDurCount" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="194">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="ATCC" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="196">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="198">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="200">
+    <StlToken Text="SET" />
+  </StlStatement>
+  <StlStatement UId="201">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActClearDurCount" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="203">
+    <LineComment>
+      <Text> Shift Archive data</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="205">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="207">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="209">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="211">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="213">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="215">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="217">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="219">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="221">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="223">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="225">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="227">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="229">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="231">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="233">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="235">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="237">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="239">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="241">
+    <LabelDeclaration>
+      <Label Name="ATCC" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="243">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="244">
+    <LineComment>
+      <Text> Count Duration</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="246">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="248">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="ActClearDurCount" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="250">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="_0CD" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="252">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="254">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="256">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="257">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="259">
+    <LabelDeclaration>
+      <Label Name="_0CD" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="261">
+    <LabelDeclaration>
+      <Label Name="ENDA" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="263">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="264">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="265">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="51" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="52" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="53" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="54" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="55" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="56" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Activation Duration</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="58" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="59" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="5D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="5E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="266">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DE_In_Use" />
+      </Symbol>
+      <LineComment>
+        <Text> IN_DE in Use</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="269">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="ENDD" />
+      <LineComment>
+        <Text> Jump to ENDA if False</Text>
+      </LineComment>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="272">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="FP_D_Pulse" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="274">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_DE" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="276">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="278">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="279">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="281">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_DE" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="283">
+    <StlToken Text="O" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_ACT" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="285">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="287">
+    <StlToken Text="R" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActClearDurCount" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="289">
+    <LineComment>
+      <Text> Move Duration Count to Archive.n1</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="291">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="293">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="IN_ACT" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="295">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="MOVD" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="297">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="299">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="301">
+    <LabelDeclaration>
+      <Label Name="MOVD" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="303">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="304">
+    <LineComment>
+      <Text>Clear Counter</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="306">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="308">
+    <StlToken Text="AN" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActClearDurCount" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="310">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="DTCC" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="312">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="314">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="316">
+    <StlToken Text="SET" />
+  </StlStatement>
+  <StlStatement UId="317">
+    <StlToken Text="S" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActClearDurCount" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="319">
+    <LineComment>
+      <Text> Shift Archive data</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="321">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="323">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="325">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="327">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="329">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="331">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="333">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="335">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="337">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="339">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="341">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="343">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="345">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="347">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="349">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="351">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="353">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="355">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="357">
+    <LabelDeclaration>
+      <Label Name="DTCC" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="359">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="360">
+    <LineComment>
+      <Text> Count Duration</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="362">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActDur" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="364">
+    <StlToken Text="A" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="DeActClearDurCount" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="366">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="D0CD" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="368">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="370">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="372">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="373">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="375">
+    <LabelDeclaration>
+      <Label Name="D0CD" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="377">
+    <LabelDeclaration>
+      <Label Name="ENDD" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="379">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="380">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="381">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="5F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="60" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="61" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="62" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="63" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="64" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="65" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="66" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="67" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="68" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>DeDeActivation Duration</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="69" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="6E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="6F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="382">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="384">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="386">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="388">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="389">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="390">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="392">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="394">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="395">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a001" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="397">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="399">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="401">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="402">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="404">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="406">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="408">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="409">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="411">
+    <LabelDeclaration>
+      <Label Name="a001" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="414">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="416">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="417">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a002" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="419">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="421">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="423">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="424">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="426">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="428">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="430">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="431">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="433">
+    <LabelDeclaration>
+      <Label Name="a002" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="436">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="438">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="439">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a003" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="441">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="443">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="445">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="446">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="448">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="450">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="452">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="453">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="455">
+    <LabelDeclaration>
+      <Label Name="a003" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="458">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="460">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="461">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a004" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="463">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="465">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="467">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="468">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="470">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="472">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="474">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="475">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="477">
+    <LabelDeclaration>
+      <Label Name="a004" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="480">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="482">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="483">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a005" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="485">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="487">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="489">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="490">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="492">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="494">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="496">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="497">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="499">
+    <LabelDeclaration>
+      <Label Name="a005" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="502">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="504">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="505">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a006" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="507">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="509">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="511">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="512">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="514">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="516">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="518">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="519">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="521">
+    <LabelDeclaration>
+      <Label Name="a006" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="524">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="526">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="527">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a007" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="529">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="531">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="533">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="534">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="536">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="538">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="540">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="541">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="543">
+    <LabelDeclaration>
+      <Label Name="a007" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="546">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="548">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="549">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a008" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="551">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="553">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="555">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="556">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="558">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="560">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="562">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="563">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="565">
+    <LabelDeclaration>
+      <Label Name="a008" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="568">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="570">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="571">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a009" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="573">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="575">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="577">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="578">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="580">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="582">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="584">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="585">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="587">
+    <LabelDeclaration>
+      <Label Name="a009" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="590">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="592">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="593">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="a010" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="595">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="597">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="599">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="600">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="602">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="604">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="606">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="607">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="609">
+    <LabelDeclaration>
+      <Label Name="a010" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="611">
+    <LineComment>
+      <Text> Calculate Average</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="613">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="615">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="617">
+    <StlToken Text="DIV_D" />
+  </StlStatement>
+  <StlStatement UId="618">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Average" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="620">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="70" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="71" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="72" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="73" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="74" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="75" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="76" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="77" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="78" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="79" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Average Activation Duration Count</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="7F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="80" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="621">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="623">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="625">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="627">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="628">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="629">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="631">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="633">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="634">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d001" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="636">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="638">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="640">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="641">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="643">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n1" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="645">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="647">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="648">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="650">
+    <LabelDeclaration>
+      <Label Name="d001" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="653">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="655">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="656">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d002" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="658">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="660">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="662">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="663">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="665">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n2" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="667">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="669">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="670">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="672">
+    <LabelDeclaration>
+      <Label Name="d002" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="675">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="677">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="678">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d003" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="680">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="682">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="684">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="685">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="687">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n3" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="689">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="691">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="692">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="694">
+    <LabelDeclaration>
+      <Label Name="d003" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="697">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="699">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="700">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d004" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="702">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="704">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="706">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="707">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="709">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n4" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="711">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="713">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="714">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="716">
+    <LabelDeclaration>
+      <Label Name="d004" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="719">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="721">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="722">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d005" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="724">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="726">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="728">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="729">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="731">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n5" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="733">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="735">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="736">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="738">
+    <LabelDeclaration>
+      <Label Name="d005" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="741">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="743">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="744">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d006" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="746">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="748">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="750">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="751">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="753">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n6" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="755">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="757">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="758">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="760">
+    <LabelDeclaration>
+      <Label Name="d006" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="763">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="765">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="766">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d007" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="768">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="770">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="772">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="773">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="775">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n7" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="777">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="779">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="780">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="782">
+    <LabelDeclaration>
+      <Label Name="d007" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="785">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="787">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="788">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d008" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="790">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="792">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="794">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="795">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="797">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n8" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="799">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="801">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="802">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="804">
+    <LabelDeclaration>
+      <Label Name="d008" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="807">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="809">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="810">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d009" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="812">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="814">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="816">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="817">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="819">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n9" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="821">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="823">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="824">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="826">
+    <LabelDeclaration>
+      <Label Name="d009" />
+    </LabelDeclaration>
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="829">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="831">
+    <StlToken Text="GT_I" />
+  </StlStatement>
+  <StlStatement UId="832">
+    <StlToken Text="JCN" />
+    <Access Scope="Label">
+      <Label Name="d010" />
+    </Access>
+  </StlStatement>
+  <StlStatement UId="834">
+    <StlToken Text="L" />
+    <Access Scope="LiteralConstant">
+      <Constant>
+        <ConstantType>Int</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="836">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="838">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="839">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="841">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Archive" />
+        <Component Name="n10" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="843">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="845">
+    <StlToken Text="ADD_I" />
+  </StlStatement>
+  <StlStatement UId="846">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="848">
+    <LabelDeclaration>
+      <Label Name="d010" />
+    </LabelDeclaration>
+    <StlToken Text="NOP_0" />
+  </StlStatement>
+  <StlStatement UId="850">
+    <LineComment>
+      <Text> Calculate Average</Text>
+    </LineComment>
+    <StlToken Text="COMMENT" />
+  </StlStatement>
+  <StlStatement UId="852">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="SumAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="854">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="CountAverage" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="856">
+    <StlToken Text="DIV_D" />
+  </StlStatement>
+  <StlStatement UId="857">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Average" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="859">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="81" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="82" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="83" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="84" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="85" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="86" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="87" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="88" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="89" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="8A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Average De_Activation Duration Count</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="8F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="90" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="91" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StatementList xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StatementList/v5">
+  <StlStatement UId="860">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="ActivationCounter" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="862">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="Info" />
+        <Component Name="Act" />
+        <Component Name="Count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="864">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="866">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="Info" />
+        <Component Name="Act" />
+        <Component Name="Duration" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="868">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Average" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="870">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="Info" />
+        <Component Name="Act" />
+        <Component Name="AvgDuration" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="872">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="873">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="De_ActivationCounter" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="875">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="Info" />
+        <Component Name="DeAct" />
+        <Component Name="Count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="877">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="count" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="879">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="Info" />
+        <Component Name="DeAct" />
+        <Component Name="Duration" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="881">
+    <StlToken Text="L" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="data" />
+        <Component Name="De_Activation" />
+        <Component Name="StrokeDuration" />
+        <Component Name="Average" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="883">
+    <StlToken Text="T" />
+    <Access Scope="LocalVariable">
+      <Symbol>
+        <Component Name="Info" />
+        <Component Name="DeAct" />
+        <Component Name="AvgDuration" />
+      </Symbol>
+    </Access>
+  </StlStatement>
+  <StlStatement UId="885">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="886">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+  <StlStatement UId="887">
+    <StlToken Text="EMPTY_LINE" />
+  </StlStatement>
+</StatementList></NetworkSource>
+          <ProgrammingLanguage>STL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="92" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="93" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="94" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="95" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="96" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="97" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="98" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="99" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="9A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="9B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>en-US</Culture>
+                  <Text>Move Data to Out Info</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>es-ES</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>fr-FR</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="9F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>it-IT</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A0" CompositionName="Items">
+                <AttributeList>
+                  <Culture>zh-CN</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+              <MultilingualTextItem ID="A1" CompositionName="Items">
+                <AttributeList>
+                  <Culture>ja-JP</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="A2" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="A3" CompositionName="Items">
+            <AttributeList>
+              <Culture>en-US</Culture>
+              <Text>Valve Monitor</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="A4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="A5" CompositionName="Items">
+            <AttributeList>
+              <Culture>es-ES</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="A6" CompositionName="Items">
+            <AttributeList>
+              <Culture>fr-FR</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="A7" CompositionName="Items">
+            <AttributeList>
+              <Culture>it-IT</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="A8" CompositionName="Items">
+            <AttributeList>
+              <Culture>zh-CN</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+          <MultilingualTextItem ID="A9" CompositionName="Items">
+            <AttributeList>
+              <Culture>ja-JP</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

@@ -1,0 +1,102 @@
+﻿FUNCTION_BLOCK "PNIO_Diagnostics"
+TITLE = Diagnostics for racks/stations on profinet IO system
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : NDJH
+VERSION : 0.1
+   VAR 
+      "2_AL1103" : "PNIO_CheckForErrors";
+      "3_AL1307" : "PNIO_CheckForErrors";
+      "4_AL1307" : "PNIO_CheckForErrors";
+      "5_AL1307" : "PNIO_CheckForErrors";
+      "6_AL1307" : "PNIO_CheckForErrors";
+      "7_AL1307" : "PNIO_CheckForErrors";
+      "8_Promag300" : "PNIO_CheckForErrors";
+      "9_SinaG120" : "PNIO_CheckForErrors";
+      "10_AL1307" : "PNIO_CheckForErrors";
+      "11_PNCoup" : "PNIO_CheckForErrors";
+      "12_AL1307" : "PNIO_CheckForErrors";
+   END_VAR
+
+
+BEGIN
+	REGION Get_ProfinetIO_Diagnostics
+	    REGION 2_AL1103
+	        #"2_AL1103"(diagnosticData:="PNIO_Diagnostic_Data"."2_AL1103",
+	                    historicalDiagnosticData:="PNIO_Diagnostic_Data"."2_AL1103_Historical",
+	                    faultID:="Module Diagnostic Result"."2_AL1103".ErrorValue,
+	                    faultCount:="Module Diagnostic Result"."2_AL1103".ErrorCount,
+	                    faultTime:="Module Diagnostic Result"."2_AL1103".ErrorTime);
+	    END_REGION
+	    REGION 3_AL1307
+	        #"3_AL1307"(diagnosticData :="PNIO_Diagnostic_Data"."3_AL1307",
+	                    historicalDiagnosticData := "PNIO_Diagnostic_Data"."3_AL1307_Historical",
+	                    faultID := "Module Diagnostic Result"."3_AL1307".ErrorValue,
+	                    faultCount := "Module Diagnostic Result"."3_AL1307".ErrorCount,
+	                    faultTime := "Module Diagnostic Result"."3_AL1307".ErrorTime);
+	    END_REGION
+	    REGION 4_AL1307
+	        #"4_AL1307"(diagnosticData := "PNIO_Diagnostic_Data"."4_AL1307",
+	                    historicalDiagnosticData := "PNIO_Diagnostic_Data"."4_AL1307_Historical",
+	                    faultID := "Module Diagnostic Result"."4_AL1307".ErrorValue,
+	                    faultCount := "Module Diagnostic Result"."4_AL1307".ErrorCount,
+	                    faultTime := "Module Diagnostic Result"."4_AL1307".ErrorTime);
+	    END_REGION
+	    REGION 5_AL1307
+	        #"5_AL1307"(diagnosticData := "PNIO_Diagnostic_Data"."5_AL1307",
+	                    historicalDiagnosticData := "PNIO_Diagnostic_Data"."5_AL1307_Historical",
+	                    faultID := "Module Diagnostic Result"."5_AL1307".ErrorValue,
+	                    faultCount := "Module Diagnostic Result"."5_AL1307".ErrorCount,
+	                    faultTime := "Module Diagnostic Result"."5_AL1307".ErrorTime);
+	    END_REGION
+	    REGION 6_AL1307
+	        #"6_AL1307"(diagnosticData := "PNIO_Diagnostic_Data"."6_AL1307",
+	                    historicalDiagnosticData := "PNIO_Diagnostic_Data"."6_AL1307_Historical",
+	                    faultID := "Module Diagnostic Result"."6_AL1307".ErrorValue,
+	                    faultCount := "Module Diagnostic Result"."6_AL1307".ErrorCount,
+	                    faultTime := "Module Diagnostic Result"."6_AL1307".ErrorTime);
+	    END_REGION
+	    REGION 7_AL1307
+	        #"7_AL1307"(diagnosticData := "PNIO_Diagnostic_Data"."7_AL1307",
+	                    historicalDiagnosticData := "PNIO_Diagnostic_Data"."7_AL1307_Historical",
+	                    faultID := "Module Diagnostic Result"."7_AL1307".ErrorValue,
+	                    faultCount := "Module Diagnostic Result"."7_AL1307".ErrorCount,
+	                    faultTime := "Module Diagnostic Result"."7_AL1307".ErrorTime);
+	    END_REGION
+	    REGION 8_Promag300
+	        #"8_Promag300"(diagnosticData := "PNIO_Diagnostic_Data"."8_Promag300",
+	                       historicalDiagnosticData := "PNIO_Diagnostic_Data"."8_Promag300_Historical",
+	                       faultID := "Module Diagnostic Result"."8_Promag300".ErrorValue,
+	                       faultCount := "Module Diagnostic Result"."8_Promag300".ErrorCount,
+	                       faultTime := "Module Diagnostic Result"."8_Promag300".ErrorTime);
+	    END_REGION
+	    REGION 9_SinaG120
+	        #"9_SinaG120"(diagnosticData := "PNIO_Diagnostic_Data"."9_SinaG120",
+	                      historicalDiagnosticData := "PNIO_Diagnostic_Data"."9_SinaG120_Historical",
+	                      faultID := "Module Diagnostic Result"."9_SinaG120".ErrorValue,
+	                      faultCount := "Module Diagnostic Result"."9_SinaG120".ErrorCount,
+	                      faultTime := "Module Diagnostic Result"."9_SinaG120".ErrorTime);
+	    END_REGION
+	    REGION 10_AL1307
+	        #"10_AL1307"(diagnosticData := "PNIO_Diagnostic_Data"."10_AL1307",
+	                     historicalDiagnosticData := "PNIO_Diagnostic_Data"."10_AL1307_Historical",
+	                     faultID := "Module Diagnostic Result"."10_AL1307".ErrorValue,
+	                     faultCount := "Module Diagnostic Result"."10_AL1307".ErrorCount,
+	                     faultTime := "Module Diagnostic Result"."10_AL1307".ErrorTime);
+	    END_REGION
+	    REGION 11_PNCoup
+	        #"11_PNCoup"(diagnosticData := "PNIO_Diagnostic_Data"."11_PNCoup",
+	                     historicalDiagnosticData := "PNIO_Diagnostic_Data"."11_PNCoup_Historical",
+	                     faultID := "Module Diagnostic Result"."11_PNCoup".ErrorValue,
+	                     faultCount := "Module Diagnostic Result"."11_PNCoup".ErrorCount,
+	                     faultTime := "Module Diagnostic Result"."11_PNCoup".ErrorTime);
+	    END_REGION
+	    REGION 12_AL1307
+	        #"12_AL1307"(diagnosticData := "PNIO_Diagnostic_Data"."12_AL1307",
+	                     historicalDiagnosticData := "PNIO_Diagnostic_Data"."12_AL1307_Historical",
+	                     faultID := "Module Diagnostic Result"."12_AL1307".ErrorValue,
+	                     faultCount := "Module Diagnostic Result"."12_AL1307".ErrorCount,
+	                     faultTime := "Module Diagnostic Result"."12_AL1307".ErrorTime);
+	    END_REGION
+	END_REGION
+END_FUNCTION_BLOCK
+
