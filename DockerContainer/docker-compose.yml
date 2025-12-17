@@ -1,0 +1,31 @@
+﻿# Docker Compose file for APV AHV HMI application
+
+services:
+  # Ignition Gateway
+  apv_ahv_edge:
+    image: inductiveautomation/ignition:8.1.50
+    ports:
+      - 8099:8088
+    networks:
+      - ign-edge
+    volumes:
+      - gw-data:/usr/local/bin/ignition/data
+    environment:
+      - IGNITION_EDITION=edge
+      - GATEWAY_ADMIN_USERNAME=admin
+      - GATEWAY_ADMIN_PASSWORD=password
+      - DISABLE_QUICKSTART=true
+      - ACCEPT_IGNITION_EULA=Y
+      - GATEWAY_MODULES_ENABLED=opc-ua,tag-historian,reporting,perspective,siemens-drivers,symbol-factory,web-developer,web-browser
+    command: >
+      -n apv_ahv_edge
+      -m 1024
+      --
+      wrapper.java.initmemory=512
+      -Dignition.allowunsignedmodules=true
+
+volumes:
+  gw-data:
+ 
+networks:
+  ign-edge:
