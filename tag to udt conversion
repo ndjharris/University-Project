@@ -1,0 +1,830 @@
+﻿import json
+obj={
+  "name": "ItemInfoScada",
+  "tagType": "Folder",
+  "tags": [
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"TANK_READY\"",
+      "dataType": "Document",
+      "name": "TANK_READY",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"AHV_HIGH_LEVEL\"",
+      "dataType": "Document",
+      "name": "AHV_HIGH_LEVEL",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0942\"",
+      "dataType": "Document",
+      "name": "V0942",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"PACK3\"",
+      "dataType": "Document",
+      "name": "PACK3",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0124\"",
+      "dataType": "Document",
+      "name": "Y0124",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0941\"",
+      "dataType": "Document",
+      "name": "V0941",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V1025\"",
+      "dataType": "Document",
+      "name": "V1025",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"M0941\"",
+      "dataType": "Document",
+      "name": "M0941",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0909\"",
+      "dataType": "Document",
+      "name": "Y0909",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"WATER_PUMP\"",
+      "dataType": "Document",
+      "name": "WATER_PUMP",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0147\"",
+      "dataType": "Document",
+      "name": "Y0147",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0545\"",
+      "dataType": "Document",
+      "name": "Y0545",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0943\"",
+      "dataType": "Document",
+      "name": "V0943",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0135_NOT_USED\"",
+      "dataType": "Document",
+      "name": "Y0135_NOT_USED",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V1027\"",
+      "dataType": "Document",
+      "name": "V1027",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0237\"",
+      "dataType": "Document",
+      "name": "Y0237",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0136_NOT_USED\"",
+      "dataType": "Document",
+      "name": "Y0136_NOT_USED",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0144_NOT_USED\"",
+      "dataType": "Document",
+      "name": "Y0144_NOT_USED",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"TANK_OPEN\"",
+      "dataType": "Document",
+      "name": "TANK_OPEN",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"PROD_AVAILABLE\"",
+      "dataType": "Document",
+      "name": "PROD_AVAILABLE",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0902\"",
+      "dataType": "Document",
+      "name": "Y0902",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0119\"",
+      "dataType": "Document",
+      "name": "Y0119",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0910\"",
+      "dataType": "Document",
+      "name": "Y0910",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0111\"",
+      "dataType": "Document",
+      "name": "Y0111",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0907\"",
+      "dataType": "Document",
+      "name": "Y0907",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0113\"",
+      "dataType": "Document",
+      "name": "Y0113",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V1024\"",
+      "dataType": "Document",
+      "name": "V1024",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V1083\"",
+      "dataType": "Document",
+      "name": "V1083",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V1021\"",
+      "dataType": "Document",
+      "name": "V1021",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"PACK4\"",
+      "dataType": "Document",
+      "name": "PACK4",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0238\"",
+      "dataType": "Document",
+      "name": "Y0238",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0116\"",
+      "dataType": "Document",
+      "name": "Y0116",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "name": "V0552",
+      "typeId": "ItemInfoScada",
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "TrippedInd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "IsolatedInd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "sv_3Activated",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "activated",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "man_on_off",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "VSD_Fault",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "ManualSelected",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "Set_FB",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "changing",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "LocateActive",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "faulty",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "auto_man",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "VSD_Alarm",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "fb_error",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "Reset_FB",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "sv_2Activated",
+          "tagType": "AtomicTag"
+        }
+      ]
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"AHV_READY\"",
+      "dataType": "Document",
+      "name": "AHV_READY",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0906\"",
+      "dataType": "Document",
+      "name": "Y0906",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"CIP_FILLER_ENABLE\"",
+      "dataType": "Document",
+      "name": "CIP_FILLER_ENABLE",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0945\"",
+      "dataType": "Document",
+      "name": "V0945",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0904\"",
+      "dataType": "Document",
+      "name": "Y0904",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0108\"",
+      "dataType": "Document",
+      "name": "Y0108",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"AlarmLamp\"",
+      "dataType": "Document",
+      "name": "AlarmLamp",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"CIP_Route\"",
+      "dataType": "Document",
+      "name": "CIP_Route",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Product_Route\"",
+      "dataType": "Document",
+      "name": "Product_Route",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0936\"",
+      "dataType": "Document",
+      "name": "V0936",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0137_NOT_USED\"",
+      "dataType": "Document",
+      "name": "Y0137_NOT_USED",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"spare2\"",
+      "dataType": "Document",
+      "name": "spare2",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0148\"",
+      "dataType": "Document",
+      "name": "Y0148",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0944\"",
+      "dataType": "Document",
+      "name": "V0944",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0930\"",
+      "dataType": "Document",
+      "name": "V0930",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"M0940\"",
+      "dataType": "Document",
+      "name": "M0940",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0114\"",
+      "dataType": "Document",
+      "name": "Y0114",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0143\"",
+      "dataType": "Document",
+      "name": "Y0143",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"CAUSTIC_READY\"",
+      "dataType": "Document",
+      "name": "CAUSTIC_READY",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0901\"",
+      "dataType": "Document",
+      "name": "Y0901",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"AHV_STERILE\"",
+      "dataType": "Document",
+      "name": "AHV_STERILE",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"X0913\"",
+      "dataType": "Document",
+      "name": "X0913",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"AHV_SHUT_DOWN\"",
+      "dataType": "Document",
+      "name": "AHV_SHUT_DOWN",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0911\"",
+      "dataType": "Document",
+      "name": "Y0911",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V1023\"",
+      "dataType": "Document",
+      "name": "V1023",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0103\"",
+      "dataType": "Document",
+      "name": "Y0103",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Barrier_Sterile\"",
+      "dataType": "Document",
+      "name": "Barrier_Sterile",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"AHV_CLOSED\"",
+      "dataType": "Document",
+      "name": "AHV_CLOSED",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0908\"",
+      "dataType": "Document",
+      "name": "Y0908",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Product_Available\"",
+      "dataType": "Document",
+      "name": "Product_Available",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0101\"",
+      "dataType": "Document",
+      "name": "Y0101",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"ACID_READY\"",
+      "dataType": "Document",
+      "name": "ACID_READY",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0912\"",
+      "dataType": "Document",
+      "name": "Y0912",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0115\"",
+      "dataType": "Document",
+      "name": "Y0115",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0931\"",
+      "dataType": "Document",
+      "name": "V0931",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0940\"",
+      "dataType": "Document",
+      "name": "V0940",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0903\"",
+      "dataType": "Document",
+      "name": "Y0903",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0109\"",
+      "dataType": "Document",
+      "name": "Y0109",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"PACK2\"",
+      "dataType": "Document",
+      "name": "PACK2",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"RINSE_READY\"",
+      "dataType": "Document",
+      "name": "RINSE_READY",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0118\"",
+      "dataType": "Document",
+      "name": "Y0118",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0104\"",
+      "dataType": "Document",
+      "name": "Y0104",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"SIP_Steam\"",
+      "dataType": "Document",
+      "name": "SIP_Steam",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0935\"",
+      "dataType": "Document",
+      "name": "V0935",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0158\"",
+      "dataType": "Document",
+      "name": "Y0158",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"V0934\"",
+      "dataType": "Document",
+      "name": "V0934",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"M0139\"",
+      "dataType": "Document",
+      "name": "M0139",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0112\"",
+      "dataType": "Document",
+      "name": "Y0112",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"PACK1\"",
+      "dataType": "Document",
+      "name": "PACK1",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Q41_1\"",
+      "dataType": "Document",
+      "name": "Q41_1",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0905\"",
+      "dataType": "Document",
+      "name": "Y0905",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    },
+    {
+      "valueSource": "opc",
+      "opcItemPath": "nsu\u003dhttp://www.siemens.com/simatic-s7-opcua;s\u003d\"ItemInfoScada\".\"Y0117\"",
+      "dataType": "Document",
+      "name": "Y0117",
+      "tagType": "AtomicTag",
+      "opcServer": "SIMATIC.S7-1500.OPC-UA.Application:apvahv"
+    }
+  ]
+}
+template={
+      "name": "V0552",
+      "typeId": "ItemInfoScada",
+      "tagType": "UdtInstance",
+      "tags": [
+        {
+          "name": "TrippedInd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "IsolatedInd",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "sv_3Activated",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "activated",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "man_on_off",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "VSD_Fault",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "ManualSelected",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "Set_FB",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "changing",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "LocateActive",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "faulty",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "auto_man",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "VSD_Alarm",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "fb_error",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "Reset_FB",
+          "tagType": "AtomicTag"
+        },
+        {
+          "name": "sv_2Activated",
+          "tagType": "AtomicTag"
+        }
+      ]
+    }
+
+newObj=obj
+for i,valve in enumerate(obj["tags"]):
+	template['name'] = valve.get('name')
+	newObj['tags'][i] = {}
+	newObj['tags'][i].update(template)
+
+json_formatted_str = json.dumps(newObj, indent=4)
+print(json_formatted_str)

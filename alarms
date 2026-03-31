@@ -1,0 +1,322 @@
+﻿0001 No process active
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0002 Allready in stop phase
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0003 Tank is being filled
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0004 Not ready for total stop
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0005 Drain tank not allowed
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0006 CIP on tank started
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0007 Chain wash selected
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0008 No CIP program selected
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0009 Tank in process
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0010 Tank not clean
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0011 No instrument air
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0012 No steam
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0013 Drain is active
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0014 CIP filler started
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0015 CIP unit occupied
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0016 Not ready for CIP
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0017 A17 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0018 A18 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0019 A19 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0020 A20 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0021 A21 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0022 A22 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0023 A23 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+ProTool
+Alarm Messages
+Page - 2 -
+0024 A24 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0025 Continue Dosing Selected
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0026 A26 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0027 A27 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0028 A28 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0029 A29 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0030 A30 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0031 A31 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0032 A32 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0033 Acid dosing too long, Continue or
+Stop
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0034 Drain the tank
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0035 Waiting for CIP unit
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0036 Filling pressure too low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0037 Filling pressure low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0038 Lye container empty
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0039 Acid container empty
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0040 Tank empty
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0041 TT01.76 Too low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0042 TT01.60 Too low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0043 TT01.63 Too low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0044 TT01.78 Too low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0045 TT01.76 Low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0046 TT01.78 Low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0047 Tank ready for production
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+ProTool
+Alarm Messages
+Page - 3 -
+0048 Lye dosing too long, Continue or
+Stop
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0049 TT09.51 Too Low, Hamba barrier
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0050 TT09.51 Low, Hamba barrier
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0051 TT09.50 Too Low, Hamba SIP
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0052 TT09.50 Low, Hamba SIP
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0053 Hamba barrier valve fault
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0054 Hamba barrier temperature low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0055 Hamba CIP Stop PB Operated
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0056 A56 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0057 Tank full
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0058 Siemens battery low
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0059 No water
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0060 Product at filling machines
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0061 Filler not ready for CIP
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0062 No instrument air
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0063 No steam
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0064 A64 Not used
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0065 Feed back error valve 01.15
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0066 Feed back error motor 01.39
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0067 Feed back error motor 01.30
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0068 Feed back error pump 02.37
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0069 Feed back error pump 02.38
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0070 Feed back error valve 01.16
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0071 Feed back error valve 01.17
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+ProTool
+Alarm Messages
+Page - 4 -
+0072 Feed back error valve 01.08
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0073 Feed back error valve 01.01
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0074 Feed back error valve 01.03
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0075 Feed back error valve 01.04
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0076 Feed back error valve 01.09
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0077 Feed back error valve 01.11
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0078 Feed back error valve 01.12
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0079 Feed back error valve 01.13
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0080 Feed back error valve 01.14
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0081 Feed back error valve 09.10
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0082 Feed back error valve 09.11
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0083 Feed back error valve 09.12
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0084 A84
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0085 A85
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0086 A86
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0087 A87
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0088 A88
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0089 Feed back error valve 01.19
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0090 Feed back error water pump
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0091 Feed back error valve 09.04
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0092 Feed back error valve 09.05
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0093 Feed back error valve 09.06
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0094 Feed back error valve 09.07
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+0095 Feed back error valve 09.08
+Priority : 1 Port : 0 Printer : - Relay : x
+Acknowledgem.: 0
+ProTool
+Alarm Messages
+Page - 5 -
+0096 Feed back error valve 09.09
+
+g = open("alarms")
+
+text = str(g.read())
+newLines = []
+lines = text.splitlines()
+
+for line in lines:
+    if line[0] == "0":
+        if line[2] == "0":
+            number = line[3]
+        else:
+            number = line[2:4]
+        alarmText = line[5:]
+        newLine = number + " : \"" + alarmText +"\","
+        newLines.append(newLine)
+
+newText = "\n".join(newLines)
+
+
+with open("finished.txt","w") as f:
+    f.write(str(newText))

@@ -1,0 +1,17 @@
+﻿string = '''0 :
+1 : Object Error CIP Held
+2 : Press F12 to Resume FILLER CIP'''
+lines = string.splitlines()
+values = []
+step_text = {}
+newString = ""
+for line in lines:
+	split = line.split(" : ")
+	if len(split) == 2:
+		#print split[1]
+		values.append('\"+split[1]+\"')
+		newString += split[0]+" : "+"\""+split[1]+"\""+",\n"
+	else:
+		values.append("")
+		newString += split[0]+" \"\""+",\n"
+print newString
